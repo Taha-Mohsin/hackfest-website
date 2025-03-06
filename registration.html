@@ -7,19 +7,22 @@
 
     <title>Register Now!</title>
 
+    <!--Mene kiya hai--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
     <!-- Icon -->
     <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css">
     <!-- Nivo Lightbox -->
-    <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css" >
+    <link rel="stylesheet" type="text/css" href  ="assets/css/nivo-lightbox.css" >
     <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" tygitpe="text/css" href="assets/css/animate.css">
     <!-- Main Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <link rel="shortcut icon" type="image/jpg" href="assets/img/codecell-logo.png"/>
+    <link rel="stylesheet" href="assets/css/submenu.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
 
   </head>
   <style>
@@ -45,20 +48,32 @@
 
 <!-- Header Area wrapper Starts -->
 <header id="header-wrap">
-  <!-- Navbar Start --><nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
     <div id="nav-container" class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <a href="index.html" class="navbar-brand"><img style="width: 180px;"id="nav-logo" src="" alt=""></a>       
+      <a href="index.html" class="navbar-brand"><img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt=""></a>       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <i class="lni-menu"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto w-100 justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">
-              Home
-            </a>
-          </li>
+          
+          <li class="nav-item active has-menu">
+            <!-- <divc class="has-menu"> -->
+              <a class="nav-link" href = "index.html">
+                Home
+              </a>
+              <ul class="submenu">
+                <li class="nav-item"><a class="nav-link" href="#e">Event Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="#p">Prize Money</a></li>
+                <li class="nav-item"><a class="nav-link" href="#t">Themes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#g">Guidelines</a></li>
+              </ul>
+              
+            <!-- </div> -->
+            </li>
+
           <li class="nav-item">
             <!-- <a class="nav-link" href="#about"> -->
             <a class="nav-link" href="about.html">
@@ -66,28 +81,32 @@
             </a>
           </li>        
           <li class="nav-item">
-                <a class="nav-link" href="./partners.html">
-                  Partners
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="hackfest2023.html" class="nav-link">
-                  Hackfest 2023
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./faq.html">
-                  FAQ
-                </a>
-              </li>
-             
+            <a class="nav-link" href="./partners.html">
+              Partners
+            </a>
+          </li>
+        </li>
+        <li class="nav-item has-menu">
+         <a href="#" class="nav-link">
+           Previous Events
+         </a>
+         <ul class="submenu">
+          <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
+          <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
+          <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
+         </ul>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./faq.html">
+              FAQ
+            </a>
+          
+     
         </ul>
-      </div>
+        </div>
     </div>
   </nav>
-  <!-- Hero Area End -->
-
-    
+  <!-- Navbar End -->
         <!-- Guidelines Section End -->
 
 <br>
@@ -229,7 +248,7 @@
                 <tr>
                   <td style="text-align: left; color: white;">Audisankara College of Engineering and Technology</td>
                   <td style="text-align: center; color: white;"></td>
-                  <td style="text-align: center; color: white;">07/04/2025</td>
+                  <td style="text-align: center; color: white;">31/03/2025</td>
                 
               </tr>
   
@@ -429,7 +448,7 @@
               <tr>
                 <td style="text-align: left; color: white;">Prasad V Potluri Siddhartha Institute of Technology</td>
                 <td style="text-align: center; color: white;"></td>
-                <td style="text-align: center; color: white;">07/04/2025</td>
+                <td style="text-align: center; color: white;">14/04/2025</td>
               
             </tr>
 
@@ -610,7 +629,7 @@
             <tr>
               <td style="text-align: left; color: white;">Sambhram Institute of Technology</td>
               <td style="text-align: center; color: white;"></td>
-              <td style="text-align: center; color: white;">31/03/2025</td>
+              <td style="text-align: center; color: white;">05/05/2025</td>
             
           </tr>
 
@@ -740,7 +759,7 @@
                 <tr>
                   <td style="text-align: left; color: white;">NITTE University</td>
                   <td style="text-align: center; color: white;"></td>
-                  <td style="text-align: center; color: white;">02/04/2025</td>
+                  <td style="text-align: center; color: white;">05/05/2025</td>
                 
               </tr>
   
@@ -933,7 +952,7 @@
                                     <tr>
                                       <td style="text-align: left; color: white;">KLE Technological University</td>
                                       <td style="text-align: center; color: white;"></td>
-                                      <td style="text-align: center; color: white;">05/0/2025</td>
+                                      <td style="text-align: center; color: white;">05/05/2025</td>
                                     
                                   </tr>
                                 </tbody>
@@ -1650,7 +1669,370 @@
 </section>  
 
 
-<
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >ASSAM:</p>
+<p style="font-size: x-large; text-align: left">GUWAHATI</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left; color: white;">NERIM Group of Institutions</td>
+              <td style="text-align: center; color: white;"></td>
+              <td style="text-align: center; color: white;">07/04/2025</td>
+            
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Royal Global University</td>
+            <td style="text-align: center; color: white;"></td>
+            <td></td>
+            
+          </tr>
+            
+
+        <tr>
+          <td style="text-align: left; color: white;">Assam Don Bosco University</td>
+          <td style="text-align: center; color: white;"></td>
+          <td></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Don Bosco College of Engineering and Technology</td>
+            <td style="text-align: center; color: white;"></td>
+           <td></td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left; color: white;">Assam Down Town University</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+
+              <tr>
+                <td style="text-align: left; color: white;">Girijananda Chowdhury Institute of Management & Technology</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: left; color: white;">Royal School of Engineering & Technology</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: left; color: white;">Kaziranga University</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left; color: white;">ASTU (Assam Science and Technology University)</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: left; color: white;">Scholar's Institute of Technology and Management</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left; color: white;">NETES Institute of Technology and Science</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>                          
+          </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+</section>
+</section> 
+
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >NORTH:</p>
+<p style="font-size: x-large; text-align: left">MEERUT</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">Meerut Institute of Engineering & Technology Meerut</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;"></td>
+                
+              </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+  </div>
+
+  <br><br>
+                  <p style="font-size: x-large; text-align: left">GREATER NOIDA</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">G L Bajaj Institute of Technology & Management, Greater Noida</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+
+                  <br><br>
+                  <p style="font-size: x-large; text-align: left">CHANDIGARH</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Chitkara University, Chandigarh</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+
+                              <tr>
+                                <td style="text-align: left; color: white;">Chandigarh University, Chandigarh</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td style="text-align: center; color: white;"></td>
+                              
+                            </tr> 
+                            <tr>
+                              <td style="text-align: left; color: white;">Chandigarh Group of Institutions</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td style="text-align: center; color: white;"></td>
+                            
+                          </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+
+                  <br><br>
+                  <p style="font-size: x-large; text-align: left">JALANDHAR</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Lovely Professional University, Jalandhar</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+
+                  <br><br>
+                  <p style="font-size: x-large; text-align: left">JAIPUR</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Poornima University, Jaipur</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+                              <tr>
+                                <td style="text-align: left; color: white;">Manipal University, Jaipur</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td style="text-align: center; color: white;"></td>
+                              
+                            </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+
+                  <br><br>
+                  <p style="font-size: x-large; text-align: left">PATIALA</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Thapar University - Sch of Maths & Comp Apps, Patiala</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+              </div>            
+</section>
+</section> 
+
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >WEST:</p>
+<p style="font-size: x-large; text-align: left">PUNE</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">JSPM University, Pune</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;"></td>
+                
+              </tr>
+              <tr>
+                <td style="text-align: left; color: white;">COEP Technological University, Pune</td>
+                <td style="text-align: center; color: white;"></td>
+                <td style="text-align: center; color: white;"></td>
+              
+            </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+  </div>
+
+</section>
+</section> 
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >EAST:</p>
+<p style="font-size: x-large; text-align: left">KOLKATA</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">Techo India University, Kolkata</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;"></td>
+                
+              </tr>
+              <tr>
+                <td style="text-align: left; color: white;">Sister Nivediata Unievsity, Kolkata</td>
+                <td style="text-align: center; color: white;"></td>
+                <td style="text-align: center; color: white;"></td>
+              
+            </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+  </div>
+
+</section>
+</section> 
 
  <!-- Ye extra hai badme delete kar dunga                                    
                                  
@@ -1700,22 +2082,29 @@
                     
 
 <br><br><br><br>
-          <footer style="background-color: rgba(20, 20, 20, 0.786);">
-  <div class="container">
-    <div class="row justify-content-left" >
-        <div class="col-lg-8 col-md-12 col-xs-12">
-      
-        <div class="site-info">
-          <p align="left">Designed and Developed by 
-            <a href="https://swayamrao.me/" rel="nofollow">Swayam</a>,
-            <a href="https://www.linkedin.com/in/om-patil-789aa2247/" rel="nofollow">Om</a>,
-            <a href="https://www.linkedin.com/in/aryaman-prakash-323390259/" rel="nofollow">Aryaman</a>,
-            <a href="https://suryansh.one" rel="nofollow">Suryansh</a>
+<footer class="text-center text-white py-3" style="background-color: rgba(28, 28, 28, 0.95);">
+  <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; padding: 0 20px;">
+      <!-- Developer Info -->
+      <div style="text-align: left; position: relative; flex: 1 1 100%;">
+          <p class="mb-0 hover-box">
+              <span class="tooltip-trigger">
+                  Designed and Developed by PSG iTECH Team
+                  <span class="tooltip-text">
+                      <strong>Developer Team:</strong><br>
+                      1. <a href="https://www.linkedin.com/in/keerthi-vijaibabu-6b35802aa/" target="_blank" class="text-white">Keerthi V - Lead</a><br>
+                      2. <a href="https://www.linkedin.com/in/madhu-subhiksha-87499b282/" target="_blank" class="text-white">Madhu Subhiksha M.R</a><br>
+                      3. <a href="https://www.linkedin.com/in/rithanya-saravanan-8aa976289" target="_blank" class="text-white">Rithanya S</a><br>
+                      4. <a href="http://linkedin.com/in/nijapriya" target="_blank" class="text-white">Nija Priya S</a><br><br>
+                      
+                      <strong>Data Collection Team:</strong><br>
+                      1. <a href="https://www.linkedin.com/in/mythryee-arumugam-8290672b7" target="_blank" class="text-white">Mythryee A - Lead</a><br>
+                      2. <a href="https://www.linkedin.com/in/loohetha-p-7930b9298" target="_blank" class="text-white">Loohetha P</a><br>
+                      3. <a href="https://www.linkedin.com/in/santhiya-vasudevan" target="_blank" class="text-white">Santhiya V</a><br>
+                      4. <a href="https://www.linkedin.com/in/sandra-muralidharan-399bb032b" target="_blank" class="text-white">Sandra M</a>
+                  </span>
+              </span>
           </p>
-          <p align="left">Dept. of CS&E (AI & ML and Cyber Security), <a href="https://www.msrit.edu/">RIT</a></p>
-        </div>
       </div>
-    </div>
   </div>
 </footer>
 
