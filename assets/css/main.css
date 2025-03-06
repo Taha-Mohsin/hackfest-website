@@ -1757,9 +1757,11 @@ h1 {
 }
 
 .blog-item .blog-image {
-  width: 100%;
+  width: 45%;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
+  
 }
 
 .blog-item .blog-image img {
