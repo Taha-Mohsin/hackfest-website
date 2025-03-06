@@ -115,7 +115,7 @@ ol li {
 }
 
 .section-title-header p {
-  text: center;
+  text-align: center;
   font-weight: 400;
   line-height: 26px;
   padding-bottom: 36px;
@@ -146,7 +146,7 @@ ol li {
 
 .section-subcontent {
   font-size: 16px;
-  text: center;
+  text-align: center;
   font-weight: 400;
   line-height: 26px;
   padding-bottom: 36px;
@@ -183,7 +183,7 @@ ol li {
 .inner-title {
   font-size: 24px;
   font-weight: 700;
-  text-tranform: capitalize;
+  /* text-tranform: capitalize; */
 }
 
 .page-tagline {
@@ -800,7 +800,7 @@ a.back-to-top:focus {
   border-bottom: 1px solid #f1f1f1;
   text-decoration: none;
   display: inline-block;
-  float: left;
+  /* float: left; */
   clear: both;
   position: relative;
   outline: 0;
@@ -1014,11 +1014,6 @@ a.back-to-top:focus {
 /* ==========================================================================
    Video Section Style
    ========================================================================== */
-.ready-to-play {
-}
-
-.ready-to-play:before {
-}
 
 
 .stop {
@@ -2150,7 +2145,7 @@ footer {
 .subscribe-inner .subscribe-title {
   color: #fff;
   font-size: 26px;
-  text-center: center;
+  text-align: center;
   margin-bottom: 50px;
   position: relative;
 }
@@ -2240,7 +2235,7 @@ footer {
   display: inline-block;
   margin: 15px 0;
   width: 24%;
-  float: left;
+  /* float: left; */
   margin-right: 0;
   border: none;
   position: relative;
@@ -2605,8 +2600,7 @@ div#clock {
     color: #000;
   }
 
-  #hero-register {
-  }
+  
   
   .hero-image {
     display: flex;
