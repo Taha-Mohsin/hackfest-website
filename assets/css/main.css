@@ -1752,7 +1752,8 @@ h1 {
 }
 
 .blog-item .blog-image {
-  width: 45%;
+  width: 100%;
+  max-width: 500px;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
