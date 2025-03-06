@@ -7,6 +7,7 @@
 
     <title>Register Now!</title>
 
+     <!--Mene kiya hai--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
     <!-- Icon -->
@@ -20,6 +21,8 @@
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <link rel="shortcut icon" type="image/jpg" href="assets/img/codecell-logo.png"/>
+    <link rel="stylesheet" href="assets/css/submenu.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
 
   </head>
   <style>
@@ -43,22 +46,34 @@
 
   <body>
 
-<!-- Header Area wrapper Starts -->
-<header id="header-wrap">
-  <!-- Navbar Start --><nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+ <!-- Header Area wrapper Starts -->
+ <header id="header-wrap">
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
     <div id="nav-container" class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <a href="index.html" class="navbar-brand"><img style="width: 180px;"id="nav-logo" src="assets/image(1).png" alt=""></a>       
+      <a href="index.html" class="navbar-brand"><img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt=""></a>       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <i class="lni-menu"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto w-100 justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">
-              Home
-            </a>
-          </li>
+          
+          <li class="nav-item active has-menu">
+            <!-- <divc class="has-menu"> -->
+              <a class="nav-link">
+                Home
+              </a>
+              <ul class="submenu">
+                <li class="nav-item"><a class="nav-link" href="#e">Event Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="#p">Prize Money</a></li>
+                <li class="nav-item"><a class="nav-link" href="#t">Themes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#g">Guidelines</a></li>
+              </ul>
+              
+            <!-- </div> -->
+            </li>
+
           <li class="nav-item">
             <!-- <a class="nav-link" href="#about"> -->
             <a class="nav-link" href="about.html">
@@ -66,26 +81,33 @@
             </a>
           </li>        
           <li class="nav-item">
-                <a class="nav-link" href="./partners.html">
-                  Partners
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="hackfest2023.html" class="nav-link">
-                  Hackfest 2023
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./faq.html">
-                  FAQ
-                </a>
-              </li>
-             
+            <a class="nav-link" href="./partners.html">
+              Partners
+            </a>
+          </li>
+        </li>
+        <li class="nav-item has-menu">
+         <a href="#" class="nav-link">
+           Previous Events
+         </a>
+         <ul class="submenu">
+          <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
+          <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
+          <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
+         </ul>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./faq.html">
+              FAQ
+            </a>
+          
+     
         </ul>
-      </div>
+        </div>
     </div>
   </nav>
-  <!-- Hero Area End -->
+  <!-- Navbar End -->
+<!-- Hero Area End -->
 
     
         <!-- Guidelines Section End -->

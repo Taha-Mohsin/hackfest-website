@@ -1518,7 +1518,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
 }
 
 /* Gallery Section */
@@ -1579,12 +1579,12 @@ h1 {
   transition: all 500ms ease;
 }
 
-#gallery .gallery-box:hover .overlay-box i {
+/* #gallery .gallery-box:hover .overlay-box i {
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
-}
+} */
 
 /* Team Item */
 .team-item:hover {
@@ -2635,8 +2635,7 @@ div#clock {
   .hero-area-bg p {
     color: #000;
   }
-  #hero-register {
-  }
+ 
   #hero-image {
     display: block;
   }
