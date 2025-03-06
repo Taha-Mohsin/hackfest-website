@@ -2864,3 +2864,90 @@ li.stylish-list {
 {
   text-align: left;
 }
+
+footer p {
+  margin: 0.2rem 0;
+  color: var(--text-light);
+  text-align: left;
+}
+  @media (max-width: 768px) {
+      .hover-box .names-list {
+          position: relative;
+          top: 10px;
+          left: 0;
+      }
+
+      .hover-box span {
+          font-size: 16px;
+      }
+
+      .names-list p {
+          font-size: 14px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .hover-box span {
+          font-size: 14px;
+      }
+
+      .names-list p {
+          font-size: 12px;
+      }
+  }
+
+  .tooltip-trigger {
+      position: relative;
+      cursor: pointer;
+      text-decoration: underline;
+      display: inline-block;
+  }
+
+  .tooltip-text {
+      visibility: hidden;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      text-align: left;
+      padding: 10px;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      font-size: 14px;
+      z-index: 1000;
+      white-space: normal; /* Allows text wrapping */
+      width: 250px; /* Set a width for better readability */
+      max-width: 100%;
+  }
+
+  .tooltip-trigger:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+  }
+  footer {
+  all: unset; /* Resets inherited styles */
+  background-color: rgba(28, 28, 28, 0.95);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Prevent footer from being affected by body's flexbox */
+body > footer {
+  display: block;
+}
