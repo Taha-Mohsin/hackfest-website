@@ -1,68 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Register Now!</title>
 
+    <!--Mene kiya hai--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
     <!-- Icon -->
     <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css">
     <!-- Nivo Lightbox -->
-    <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css" >
+    <link rel="stylesheet" type="text/css" href  ="assets/css/nivo-lightbox.css" >
     <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" tygitpe="text/css" href="assets/css/animate.css">
     <!-- Main Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <link rel="shortcut icon" type="image/jpg" href="assets/img/codecell-logo.png"/>
+    <link rel="stylesheet" href="assets/css/submenu.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
 
   </head>
   <style>
     .faq-list .card-header .btn-link {
       color: black;
     }
-    /* Filter Icon and Dropdown Styling */
-.filter-icon {
-  position: fixed;
-  top: 80px; /* Adjust based on your header height */
-  right: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 22px;
-  color: #00aaff; /* Match your blue text color */
-  z-index: 1000;
-}
-.filter-icon:hover {
-  color: #0077cc;
-}
-.filter-container {
-  display: none;
-  position: fixed;
-  top: 120px; /* Adjust based on your header height */
-  right: 30px;
-  background: rgba(0, 0, 0, 0.8); /* Match your page's background */
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-  width: 220px;
-  z-index: 1000;
-}
-.filter-container select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  background-color: #333;
-  color: white;
-  border: 1px solid white;
-}
     #table table {
             border-collapse: collapse;
             width: 100%;
@@ -82,20 +48,32 @@
 
 <!-- Header Area wrapper Starts -->
 <header id="header-wrap">
-  <!-- Navbar Start --><nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
     <div id="nav-container" class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <a href="index.html" class="navbar-brand"><img style="width: 180px;"id="nav-logo" src="" alt=""></a>       
+      <a href="index.html" class="navbar-brand"><img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt=""></a>       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <i class="lni-menu"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto w-100 justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">
-              Home
-            </a>
-          </li>
+          
+          <li class="nav-item has-menu">
+            <!-- <divc class="has-menu"> -->
+              <a class="nav-link" href = "index.html">
+                Home
+              </a>
+              <ul class="submenu">
+                <li class="nav-item"><a class="nav-link" href="#e">Event Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="#p">Prize Money</a></li>
+                <li class="nav-item"><a class="nav-link" href="#t">Themes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#g">Guidelines</a></li>
+              </ul>
+              
+            <!-- </div> -->
+            </li>
+
           <li class="nav-item">
             <!-- <a class="nav-link" href="#about"> -->
             <a class="nav-link" href="about.html">
@@ -103,55 +81,32 @@
             </a>
           </li>        
           <li class="nav-item">
-                <a class="nav-link" href="./partners.html">
-                  Partners
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="hackfest2023.html" class="nav-link">
-                  Hackfest 2023
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./faq.html">
-                  FAQ
-                </a>
-              </li>
-             
+            <a class="nav-link" href="./partners.html">
+              Partners
+            </a>
+          </li>
+        </li>
+        <li class="nav-item has-menu">
+         <a href="#" class="nav-link">
+           Previous Events
+         </a>
+         <ul class="submenu">
+          <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
+          <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
+          <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
+         </ul>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./faq.html">
+              FAQ
+            </a>
+          
+     
         </ul>
-      </div>
+        </div>
     </div>
   </nav>
-  <!-- Hero Area End -->
-
-    <!-- Filter Icon -->
-<button class="filter-icon" onclick="toggleFilter()">
-  <i class="fas fa-filter"></i>
-</button>
-
-<!-- Filter Dropdown -->
-<div class="filter-container" id="filterContainer">
-  <select id="stateFilter">
-    <option value="">Select State</option>
-    <option value="ANDHRA PRADESH">Andhra Pradesh</option>
-    <option value="KARNATAKA">Karnataka</option>
-    <option value="KERALA">Kerala</option>
-    <option value="GOA">Goa</option>
-    <option value="TAMIL NADU">Tamil Nadu</option>
-    <option value="TELANGANA">Telangana</option>
-  </select>
-  <select id="cityFilter">
-    <option value="">Select City</option>
-    <option value="Tirupati">Tirupati</option>
-    <option value="Nellore">Nellore</option>
-    <option value="Vizag">Vizag</option>
-    <option value="Vijayawada">Vijayawada</option>
-    <option value="Bangalore">Bangalore</option>
-    <option value="Chennai">Chennai</option>
-    <option value="Pune">Pune</option>
-    <option value="Jaipur">Jaipur</option>
-  </select>
-</div>
+  <!-- Navbar End -->
         <!-- Guidelines Section End -->
 
 <br>
@@ -172,7 +127,7 @@
   <p style="text-align: center;letter-spacing: 1px;font-size: 20px;">Hackfest25 is here in your city and colleges!  <a
     href="https://docs.google.com/forms/d/e/1FAIpQLScOjMX7XmbtMQ_oqPxK7jPQdOUFwq-zGXoLDiMutGqe8dPPiA/viewform" target="_blank"
   >
-    Click here </a> to sign in and join the excitement.</p>  
+    CLICK HERE </a> to sign in and join the excitement.</p>  
  
 
   
@@ -199,13 +154,14 @@
               <tr>
                 <td style="text-align: left; color: white;">Sri Venkateswara College of Engineering</td>
                 <td style="text-align: center; color: white;"></td>
-                <td style="text-align: center; color: white;" rowspan="12">31/03/2025</td>
+                <td style="text-align: center; color: white;">31/03/2025</td>
               
             </tr>
 
             <tr>
               <td style="text-align: left; color: white;">Swetha Institute Of Technology and Science</td>
               <td style="text-align: center; color: white;"></td>
+              <td></td>
               
             </tr>
               
@@ -213,60 +169,60 @@
           <tr>
             <td style="text-align: left; color: white;">Shree Institute of Technical Education</td>
             <td style="text-align: center; color: white;"></td>
-            
+            <td></td>
             </tr>
 
             <tr>
               <td style="text-align: left; color: white;">Annamacharya Institute of Technology and Sciences</td>
               <td style="text-align: center; color: white;"></td>
-             
+             <td></td>
               </tr>
 
               <tr>
                 <td style="text-align: left; color: white;">Chadalawada Ramanamma Engineering College</td>
                 <td style="text-align: center; color: white;"></td>
-                
+                <td></td>
                 </tr>
 
                 <tr>
                   <td style="text-align: left; color: white;">Sree Rama Engineering College</td>
                   <td style="text-align: center; color: white;"></td>
-                  
+                  <td></td>
                   </tr>
 
                   <tr>
                     <td style="text-align: left; color: white;">KMM Institute Of Technology And Science</td>
                     <td style="text-align: center; color: white;"></td>
-                    
+                    <td></td>
                     </tr>
 
                     <tr>
                       <td style="text-align: left; color: white;">Yogananda Institute of Technology and Science</td>
                       <td style="text-align: center; color: white;"></td>
-                      
+                      <td></td>
                       </tr>
 
                       <tr>
                         <td style="text-align: left; color: white;">Sree Venkateswara College of Engineering</td>
                         <td style="text-align: center; color: white;"></td>
-                        
+                        <td></td>
                         </tr>
 
                         <tr>
                           <td style="text-align: left; color: white;">Vemu Engineering College </td>
                           <td style="text-align: center; color: white;"></td>
-                          
+                          <td></td>
                           </tr>
 
                           <tr>
                             <td style="text-align: left; color: white;">Siddartha Education Academy</td>
                             <td style="text-align: center; color: white;"></td>
-                            
+                            <td></td>
                             </tr>
                             <tr>
                               <td style="text-align: left; color: white;">Mohanbabu University</td>
                               <td style="text-align: center; color: white;"></td>
-                              
+                              <td></td>
                               </tr>  
             </tbody>
           </table>
@@ -274,6 +230,105 @@
   </div>
 </div>
 
+
+<br><br>
+  <p style="font-size: x-large; text-align: left">NELLORE</p>
+    <div class="row">
+        <div class="col-12">
+            <div class="table-content">
+              <table style="width: 100%; table-layout: fixed;">
+                <thead>
+                    <tr>
+                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                    </tr>
+                </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">Audisankara College of Engineering and Technology</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;">31/03/2025</td>
+                
+              </tr>
+  
+              <tr>
+                <td style="text-align: left; color: white;">Narayana Engineering College (NEC, Nellore)</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+              </tr>
+                
+  
+            <tr>
+              <td style="text-align: left; color: white;">Geethanjali Institute of Science And Technology, Kovur</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+  
+              <tr>
+                <td style="text-align: left; color: white;">Visvodaya Engineering College</td>
+                <td style="text-align: center; color: white;"></td>
+               <td></td>
+                </tr>
+  
+                <tr>
+                  <td style="text-align: left; color: white;">Parvatha Reddy Babulreddy Visvodaya Institute of Technology and Science</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+  
+                  <tr>
+                    <td style="text-align: left; color: white;">Gokula Krishna College of Engineering</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+  
+                    <tr>
+                      <td style="text-align: left; color: white;">NBKR Institute Of Science and Technology</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+  
+                      <tr>
+                        <td style="text-align: left; color: white;">Andhra Engineering College</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+  
+                        <tr>
+                          <td style="text-align: left; color: white;">K S N Institute of Technology</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>
+  
+                          <tr>
+                            <td style="text-align: left; color: white;">Vikrama Simhapuri University</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td></td>
+                            </tr>
+  
+                            <tr>
+                              <td style="text-align: left; color: white;">Sanketika Institute of Technology and Management</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: left; color: white;">Dadi Institute of Engineering & Technology
+                                </td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Maharaj Vijayaram Gajapathi Raj College of Engineering 
+                                  </td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td></td>
+                                  </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
 
 
 <br><br>
@@ -293,81 +348,81 @@
                 <tr>
                   <td style="text-align: left; color: white;">Andhra University</td>
                   <td style="text-align: center; color: white;"></td>
-                  <td style="text-align: center; color: white;" rowspan="13">07/04/2025</td>
+                  <td style="text-align: center; color: white;">07/04/2025</td>
                 
               </tr>
   
               <tr>
                 <td style="text-align: left; color: white;">Vignan's Institute of Information Technology</td>
                 <td style="text-align: center; color: white;"></td>
-                
+                <td></td>
               </tr>
                 
   
             <tr>
               <td style="text-align: left; color: white;">Raghu Engineering College</td>
               <td style="text-align: center; color: white;"></td>
-              
+              <td></td>
               </tr>
   
               <tr>
                 <td style="text-align: left; color: white;">Gayatri Vidya Parishad College of Engineering</td>
                 <td style="text-align: center; color: white;"></td>
-               
+               <td></td>
                 </tr>
   
                 <tr>
                   <td style="text-align: left; color: white;">GITAM School of Technology</td>
                   <td style="text-align: center; color: white;"></td>
-                  
+                  <td></td>
                   </tr>
   
                   <tr>
                     <td style="text-align: left; color: white;">Gitam University </td>
                     <td style="text-align: center; color: white;"></td>
-                    
+                    <td></td>
                     </tr>
   
                     <tr>
                       <td style="text-align: left; color: white;">Avanthi Institute of Engineering and Technology</td>
                       <td style="text-align: center; color: white;"></td>
-                      
+                      <td></td>
                       </tr>
   
                       <tr>
                         <td style="text-align: left; color: white;">Vishaka Institue of Engineering and Technology</td>
                         <td style="text-align: center; color: white;"></td>
-                        
+                        <td></td>
                         </tr>
   
                         <tr>
                           <td style="text-align: left; color: white;">Pragathi Engineering College</td>
                           <td style="text-align: center; color: white;"></td>
-                          
+                          <td></td>
                           </tr>
   
                           <tr>
                             <td style="text-align: left; color: white;">Anil Neerukonda Institute of Techonology and Sciences (ANITS)</td>
                             <td style="text-align: center; color: white;"></td>
-                            
+                            <td></td>
                             </tr>
   
                             <tr>
                               <td style="text-align: left; color: white;">Sanketika Institute of Technology and Management</td>
                               <td style="text-align: center; color: white;"></td>
-                              
+                              <td></td>
                               </tr>
                               <tr>
                                 <td style="text-align: left; color: white;">Dadi Institute of Engineering & Technology
                                 </td>
                                 <td style="text-align: center; color: white;"></td>
-                                
+                                <td></td>
                                 </tr>
                                 <tr>
                                   <td style="text-align: left; color: white;">Maharaj Vijayaram Gajapathi Raj College of Engineering 
                                   </td>
                                   <td style="text-align: center; color: white;"></td>
-                                  
+                                  <td></td>
                                   </tr>
               </tbody>
             </table>
@@ -393,75 +448,75 @@
               <tr>
                 <td style="text-align: left; color: white;">Prasad V Potluri Siddhartha Institute of Technology</td>
                 <td style="text-align: center; color: white;"></td>
-                <td style="text-align: center; color: white;" rowspan="12">07/04/2025</td>
+                <td style="text-align: center; color: white;">14/04/2025</td>
               
             </tr>
 
             <tr>
               <td style="text-align: left; color: white;">Velagapudi Ramakrishna Siddhartha Engineering College</td>
               <td style="text-align: center; color: white;"></td>
-              
+              <td></td>
             </tr>
               
 
           <tr>
             <td style="text-align: left; color: white;">Andhra Loyola Institute of Engineering and Technology</td>
             <td style="text-align: center; color: white;"></td>
-            
+            <td></td>
             </tr>
 
             <tr>
               <td style="text-align: left; color: white;">Potti Sriramulu College Of Engineering And Technology</td>
               <td style="text-align: center; color: white;"></td>
-             
+              <td></td>
               </tr>
 
               <tr>
                 <td style="text-align: left; color: white;">SRM University</td>
                 <td style="text-align: center; color: white;"></td>
-                
+                <td></td>
                 </tr>
 
                 <tr>
                   <td style="text-align: left; color: white;">SRK Institute of Technology</td>
                   <td style="text-align: center; color: white;"></td>
-                  
+                  <td></td>
                   </tr>
 
                   <tr>
                     <td style="text-align: left; color: white;">PSCMR College of Engineering and Technology</td>
                     <td style="text-align: center; color: white;"></td>
-                    
+                    <td></td>
                     </tr>
 
                     <tr>
                       <td style="text-align: left; color: white;">NRI Institute of Technology</td>
                       <td style="text-align: center; color: white;"></td>
-                      
+                      <td></td>
                       </tr>
 
                       <tr>
                         <td style="text-align: left; color: white;">Kakaraparti Bhavanarayana</td>
                         <td style="text-align: center; color: white;"></td>
-                        
+                        <td></td>
                         </tr>
 
                         <tr>
                           <td style="text-align: left; color: white;">Lingayas Institute of Management and Technology</td>
                           <td style="text-align: center; color: white;"></td>
-                          
+                          <td></td>
                           </tr>
 
                           <tr>
                             <td style="text-align: left; color: white;">Dhanekula Institute of Engineering & Technology</td>
                             <td style="text-align: center; color: white;"></td>
-                            
+                            <td></td>
                             </tr>
                             <tr>
                               <td style="text-align: left; color: white;">Chalpathi Institue of Technology
                               </td>
                               <td style="text-align: center; color: white;"></td>
-                              
+                              <td></td>
                               </tr>
                              
             </tbody>
@@ -472,353 +527,1158 @@
 </div> 
 
 
-
+<br><br>
+  <p style="font-size: x-large; text-align: left">KURNOOL</p><BR>
+    <div class="row">
+        <div class="col-12">
+            <div class="table-content">
+              <table style="width: 100%; table-layout: fixed;">
+                <thead>
+                    <tr>
+                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                    </tr>
+                </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">Ashoka Women's Engineering College</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;">02/04/2025</td>
+                
+              </tr>
   
-
-
+              <tr>
+                <td style="text-align: left; color: white;">Vikas College of Engineering and Technology</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+              </tr>
+                
+  
+            <tr>
+              <td style="text-align: left; color: white;">Vishaka Institue of Engineering and Technology College</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+  
+              <tr>
+                <td style="text-align: left; color: white;">Godavari Institute of Engineering and Technology</td>
+                <td style="text-align: center; color: white;"></td>
+               <td></td>
+                </tr>
+  
+                <tr>
+                  <td style="text-align: left; color: white;">Lakireddy Bali Reddy college of Engineering</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+  
+                  <tr>
+                    <td style="text-align: left; color: white;">Pragati Engineering College</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+  
+                    <tr>
+                      <td style="text-align: left; color: white;">GMR Institute Of Technology</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+  
+                      <tr>
+                        <td style="text-align: left; color: white;">SRKR Engineering College</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+  
+                        <tr>
+                          <td style="text-align: left; color: white;">Kallam Haranadhareddy Institute of Technology</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+            </div> 
 
 </section>
 </section>
 
-  <section id="table" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-title-header text-left">  
-  <p style="font-size: x-large;">KARNATAKA:</p>
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >KARNATAKA:</p>
+<p style="font-size: x-large; text-align: left">BANGALORE</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left; color: white;">Sambhram Institute of Technology</td>
+              <td style="text-align: center; color: white;"></td>
+              <td style="text-align: center; color: white;">05/05/2025</td>
+            
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">BMS College of Engineering</td>
+            <td style="text-align: center; color: white;"></td>
+            <td></td>
+            
+          </tr>
+            
+
+        <tr>
+          <td style="text-align: left; color: white;">Cambridge Group of Institutions</td>
+          <td style="text-align: center; color: white;"></td>
+          <td></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Christ University</td>
+            <td style="text-align: center; color: white;"></td>
+           <td></td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left; color: white;">East Point College of Engineering</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+
+              <tr>
+                <td style="text-align: left; color: white;">Garden City University</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: left; color: white;">Jyothy Institute of Technology</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: left; color: white;">Kristu Jayanti College</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align: left; color: white;">MS Ramaiah Institute of Technology</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+
+                      <tr>
+                        <td style="text-align: left; color: white;">Nagarjuna College of Engineering and Technology</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+
+                        <tr>
+                          <td style="text-align: left; color: white;">Nitte Meenakshi Institute of Technology</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left; color: white;">PES University Main Campus</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left; color: white;">PES University South Campus</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: left; color: white;">Presidency College</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Reva University</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td style="text-align: left; color: white;">RV College of Engineering</td>
+                                    <td style="text-align: center; color: white;"></td>
+                                    <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="text-align: left; color: white;">JSS Acdemy of Technical Eductaion</td>
+                                      <td style="text-align: center; color: white;"></td>
+                                      <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="text-align: left; color: white;">Global Academy</td>
+                                        <td style="text-align: center; color: white;"></td>
+                                        <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td style="text-align: left; color: white;">RV University</td>
+                                          <td style="text-align: center; color: white;"></td>
+                                          <td></td>
+                                          </tr>
+                
+          </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+
+<br><br>
+  <p style="font-size: x-large; text-align: left">MANGALORE</p>
+    <div class="row">
+        <div class="col-12">
+            <div class="table-content">
+              <table style="width: 100%; table-layout: fixed;">
+                <thead>
+                    <tr>
+                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                    </tr>
+                </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">NITTE University</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;">05/05/2025</td>
+                
+              </tr>
+  
+              <tr>
+                <td style="text-align: left; color: white;">St. Aloysius</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+              </tr>
+                
+  
+            <tr>
+              <td style="text-align: left; color: white;">Mangalore University</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+  
+              <tr>
+                <td style="text-align: left; color: white;">Manipal Institute of Technology</td>
+                <td style="text-align: center; color: white;"></td>
+               <td></td>
+                </tr>
+  
+                <tr>
+                  <td style="text-align: left; color: white;">St Joseph Engineering College</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+  
+                  <tr>
+                    <td style="text-align: left; color: white;">Canara College</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+  
+                    <tr>
+                      <td style="text-align: left; color: white;">Yenepoya Institute of Technology</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+  
+                      <tr>
+                        <td style="text-align: left; color: white;">Srinivas University</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+  
+                        <tr>
+                          <td style="text-align: left; color: white;">Mangalore Institute of Technology and Engineering</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>
+
+                          <tr>
+                            <td style="text-align: left; color: white;">Sahyadri College of Engineering & Management</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left; color: white;">Alvas Engineering College</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: left; color: white;">Shree Devi Institute of Technology (SDIT)</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: left; color: white;">MITe</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td style="text-align: left; color: white;">P. A. College of Engineering (PACE) Mangalore</td>
+                                    <td style="text-align: center; color: white;"></td>
+                                    <td></td>
+                                    </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+            </div> 
+
+            <br><br>
+            <p style="font-size: x-large; text-align: left">MYSORE</p><br>
+              <div class="row">
+                  <div class="col-12">
+                      <div class="table-content">
+                        <table style="width: 100%; table-layout: fixed;">
+                          <thead>
+                              <tr>
+                                  <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                  <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                  <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                              </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                            <td style="text-align: left; color: white;">University of Mysore</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td style="text-align: center; color: white;">05/05/2025</td>
+                          
+                        </tr>
+            
+                        <tr>
+                          <td style="text-align: left; color: white;">Saradavilas FGC Mysore</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                        </tr>
+                          
+            
+                      <tr>
+                        <td style="text-align: left; color: white;">Mysore Makkala Koota and Sri</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+            
+                        <tr>
+                          <td style="text-align: left; color: white;">Dharmasthala Manjunatheswara College for Women</td>
+                          <td style="text-align: center; color: white;"></td>
+                         <td></td>
+                          </tr>
+            
+                          <tr>
+                            <td style="text-align: left; color: white;">N.I.E. First Grade College</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td></td>
+                            </tr>
+            
+                            <tr>
+                              <td style="text-align: left; color: white;">M.E.S. First Grade College</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td></td>
+                              </tr>
+            
+                              <tr>
+                                <td style="text-align: left; color: white;">Vidya Vikas collage of enginnering</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td></td>
+                                </tr>
+            
+                                <tr>
+                                  <td style="text-align: left; color: white;">Teresian Collage</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td></td>
+                                  </tr>
+            
+                                  <tr>
+                                    <td style="text-align: left; color: white;">GSSS Institute of Engineering & Technology for Women</td>
+                                    <td style="text-align: center; color: white;"></td>
+                                    <td></td>
+                                    </tr>
+          
+                                    <tr>
+                                      <td style="text-align: left; color: white;">Bahadur Institute of Management Sciences (BIMS)</td>
+                                      <td style="text-align: center; color: white;"></td>
+                                      <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="text-align: left; color: white;">Vidyavardhaka FGC, Mysore</td>
+                                        <td style="text-align: center; color: white;"></td>
+                                        <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td style="text-align: left; color: white;">JSS women's collage</td>
+                                          <td style="text-align: center; color: white;"></td>
+                                          <td></td>
+                                        </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                     
+                     <br><br>
+                      <p style="font-size: x-large; text-align: left">HUBLI</p><br>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table-content">
+                                  <table style="width: 100%; table-layout: fixed;">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                            <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                            <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                        </tr>
+                                    </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="text-align: left; color: white;">KLE Technological University</td>
+                                      <td style="text-align: center; color: white;"></td>
+                                      <td style="text-align: center; color: white;">05/05/2025</td>
+                                    
+                                  </tr>
+                                </tbody>
+                              </table>
+                          </div>
+                      </div>
+                    </div>
+                    </div> 
+                  
+</section>
+</section>    
+
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >TAMILNADU:</p>
+<p style="font-size: x-large; text-align: left">CHENNAI</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left; color: white;">Chennai Institute of Technology</td>
+              <td style="text-align: center; color: white;"></td>
+              <td style="text-align: center; color: white;">24/03/2025</td>
+            
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Velammal Engineering College</td>
+            <td style="text-align: center; color: white;"></td>
+            <td></td>
+            
+          </tr>
+            
+
+        <tr>
+          <td style="text-align: left; color: white;">Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology</td>
+          <td style="text-align: center; color: white;"></td>
+          <td></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">SSN College of Engineering</td>
+            <td style="text-align: center; color: white;"></td>
+           <td></td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left; color: white;">Sri Sairam Engineering College</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+
+              <tr>
+                <td style="text-align: left; color: white;">SRM University</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: left; color: white;">B. S. Abdur Rahman Crescent Institute Of Science And Technology</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: left; color: white;">Vellore Institute of Technology</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+
+                    
+          </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<br><br>
+  <p style="font-size: x-large; text-align: left">COIMBATORE</p>
+    <div class="row">
+        <div class="col-12">
+            <div class="table-content">
+              <table style="width: 100%; table-layout: fixed;">
+                <thead>
+                    <tr>
+                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                    </tr>
+                </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">Sri Ramakrishna Engineering College</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;">17/03/2025</td>
+                
+              </tr>
+  
+              <tr>
+                <td style="text-align: left; color: white;">Sri Krishna Collge of Engineering and Technology</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+              </tr>
+                
+  
+            <tr>
+              <td style="text-align: left; color: white;">Dr.N.G.P Institute of Technology</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+  
+              <tr>
+                <td style="text-align: left; color: white;">KPR Institute of Engineering and Technology</td>
+                <td style="text-align: center; color: white;"></td>
+               <td></td>
+                </tr>
+  
+                <tr>
+                  <td style="text-align: left; color: white;">Adithya Institute Of Technology</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+  
+                  <tr>
+                    <td style="text-align: left; color: white;">Sri Ramakrishna Institute of Technology</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+  
+                    <tr>
+                      <td style="text-align: left; color: white;">Kumaraguru College of Technology</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+  
+                      <tr>
+                        <td style="text-align: left; color: white;">SNS Collge of Technology</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+  
+                        <tr>
+                          <td style="text-align: left; color: white;">Coimbatore Institute of Engineering and Technology</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>
+
+                          <tr>
+                            <td style="text-align: left; color: white;">Karpagam Instituitions</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left; color: white;">Hindusthan College of Engineering and Technology</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td></td>
+                              </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+
+            <br><br>
+            <p style="font-size: x-large; text-align: left">SALEM</p>
+              <div class="row">
+                  <div class="col-12">
+                      <div class="table-content">
+                        <table style="width: 100%; table-layout: fixed;">
+                          <thead>
+                              <tr>
+                                  <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                  <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                  <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                              </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                            <td style="text-align: left; color: white;">Sona College of Technology</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td style="text-align: center; color: white;">24/03/2025</td>
+                          
+                        </tr>
+            
+                        <tr>
+                          <td style="text-align: left; color: white;">Knowledge Institute of Technology </td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                        </tr>
+                          
+            
+                      <tr>
+                        <td style="text-align: left; color: white;">AVS Engineering College</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+            
+                        <tr>
+                          <td style="text-align: left; color: white;">Excel Engineering College</td>
+                          <td style="text-align: center; color: white;"></td>
+                         <td></td>
+                          </tr>
+            
+                          <tr>
+                            <td style="text-align: left; color: white;">Mahendra College of Engineering</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td></td>
+                            </tr>
+            
+                            <tr>
+                              <td style="text-align: left; color: white;">Dhirajlal Gandhi College of Technology</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td></td>
+                              </tr>
+            
+                              <tr>
+                                <td style="text-align: left; color: white;">Salem College of Engineering and Technology</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                  </div>
+            
+                  <br><br>
+                  <p style="font-size: x-large; text-align: left">MADURAI</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Thiagarajar College of Engineering, Madurai</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;">24/03/2025</td>
+                                
+                              </tr>    
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                </div>
+                </div>                    
+</section>
+</section>    
+
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >KERALA:</p>
+<p style="font-size: x-large; text-align: left">COCHIN</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left; color: white;">Amal Jyothi College of Engineering</td>
+              <td style="text-align: center; color: white;"></td>
+              <td style="text-align: center; color: white;">02/06/2025</td>
+            
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Albertian Engineering</td>
+            <td style="text-align: center; color: white;"></td>
+            <td></td>
+            
+          </tr>
+            
+
+        <tr>
+          <td style="text-align: left; color: white;">Albertian Institute of Science & Technology</td>
+          <td style="text-align: center; color: white;"></td>
+          <td></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">College of Engineering, Cherthala</td>
+            <td style="text-align: center; color: white;"></td>
+           <td></td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left; color: white;">College of Engineering, Chengannoor</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+
+              <tr>
+                <td style="text-align: left; color: white;">College of Engineering, Kalloopara</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: left; color: white;">College of Engineering, Poonjar</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: left; color: white;">Cochin University of Science and Technology, University Road, South Kalamassery</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left; color: white;">Kristhujyothi College of Management</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: left; color: white;">Saintgits College of Engineering</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left; color: white;">Sree Narayana Gurukulam College of Engineering, Kolenchery, Kadayirippu</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left; color: white;">MES AIMAT</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left; color: white;">KMEA Engineering College</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: left; color: white;">Rajagiri College of Social Sciences</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Toc H Institute of Science & Technology (TIST), P.O., Arakkunnam</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td></td>
+                                  </tr>
+
+                    
+          </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<br><br>
+                  <p style="font-size: x-large; text-align: left">KANNUR</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">St Thomas College of Engineering</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;">02/06/2025</td>
+                                
+                              </tr> 
+                              
+                              <tr>
+                                <td style="text-align: left; color: white;">Leaders College</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td style="text-align: center; color: white;"></td>
+                              
+                            </tr> 
+                            <tr>
+                              <td style="text-align: left; color: white;">Sunrise College</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td style="text-align: center; color: white;"></td>
+                            
+                          </tr> 
+                          <tr>
+                            <td style="text-align: left; color: white;">IBF College</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td style="text-align: center; color: white;"></td>
+                          
+                        </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                </div>
+                </div>                    
+</section>
+</section>  
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >TELENGANA:</p>
+<p style="font-size: x-large; text-align: left">HYDERABAD</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left; color: white;">CBIT</td>
+              <td style="text-align: center; color: white;"></td>
+              <td style="text-align: center; color: white;">14/04/2025</td>
+            
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Malla Reddy Engineering College</td>
+            <td style="text-align: center; color: white;"></td>
+            <td></td>
+            
+          </tr>
+            
+
+        <tr>
+          <td style="text-align: left; color: white;">VNR VJIET</td>
+          <td style="text-align: center; color: white;"></td>
+          <td></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Vardhaman College of Engineering</td>
+            <td style="text-align: center; color: white;"></td>
+           <td></td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left; color: white;">Vasavi College of Engineering - VCE</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+
+              <tr>
+                <td style="text-align: left; color: white;">University of Hyderabad </td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: left; color: white;">Mahindra University </td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: left; color: white;">Anurag University </td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left; color: white;">Chaitanya Bharathi Institute of Technology</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: left; color: white;">Gokaraju Rangaraju Institue of Engineering and Technology</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left; color: white;">GNITS</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>
+                          
+          </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</section>
+</section>  
+
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >GOA:</p>
+<p style="font-size: x-large; text-align: left">GOA (NORTH)</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+            </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left; color: white;">VP’s Mandre College of Commerce, Economics and Management, Mandre, Goa</td>
+              <td style="text-align: center; color: white;"></td>
+              <td style="text-align: center; color: white;">09/06/2025</td>
+            
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Dnyanprassarak Mandal's College and Research Centre</td>
+            <td style="text-align: center; color: white;"></td>
+            <td></td>
+            
+          </tr>
+            
+
+        <tr>
+          <td style="text-align: left; color: white;">Rosary College of Commerce and Arts</td>
+          <td style="text-align: center; color: white;"></td>
+          <td></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Agnel Institute Of Food Craft's & Culinary Sciences</td>
+
+            
+            <td style="text-align: center; color: white;"></td>
+           <td></td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left; color: white;">Don Bosco College of Engineering</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+
+              <tr>
+                <td style="text-align: left; color: white;">SPES’S Goa Multi-Faculty College</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: left; color: white;">Harmal Panchakroshi Shikshan Madal's Ganpat Parsekar College of Education, Vidya Sankul, Bhom Plateau, Harmal, Pernem, Goa.</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: left; color: white;">Narayan Zantye College of Commerce Bicholim Goa</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left; color: white;">Government College of Arts Science and Commerce Quepem</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: left; color: white;">Institute of Shipbuilding Technology Goa</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left; color: white;">MES Vasant Joshi College of Arts and Commerce</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left; color: white;">Govt college of Arts Science and Commerce Khandola Marcela Goa</td>
+                            <td style="text-align: center; color: white;"></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                              <td style="text-align: left; color: white;">Agnel Instiute of Technology and Design</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td></td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: left; color: white;">Padre Conceicao College of Engineering</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td></td>
+                                </tr>
+                          
+          </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<br><br>
+<p style="font-size: x-large; text-align: left">GOA (SOUTH)</p>
   <div class="row">
       <div class="col-12">
           <div class="table-content">
             <table style="width: 100%; table-layout: fixed;">
               <thead>
                   <tr>
-                      <th style="width: 33.33%; color: white;" class="text-center">College</th>
+                      <th style="width: 33.33%; color: white;" class="text-center">College </th>
                       <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
                       <th style="width: 33.33%; color: white;" class="text-center">Date</th>
-                      
                   </tr>
               </thead>
             <tbody>
-              <!-- <tr>
-                  <td style="text-align: center; color: white;">NITTE Meenakshi Institute of Technology, Banglore</td>
-                  <td style="text-align: center; color: white;">Dr Sreekanth <br><a href="mailto:sreekanth.rallapalli@nmit.ac.in">sreekanth.rallapalli@nmit.ac.in</a></td>
-                  <td style="text-align: center; color: white;"><a href="#" style="color: white;">TBD</a></td>
-                <td style="text-align: center; color: white;"><a href="#" style="color: white;">TBD</a></td>
-            </tr> -->
-
-            <tr>
-                <td style="text-align: center; color: white;">Ramaiah Institute of Technology, Bangalore</td>
-                <td style="text-align: center; color: white;">Dr. Sini Anna Alex<br><a href="mailto:sinialex@msrit.edu">sinialex@msrit.edu</a></td>
-                <td style="text-align: center; color: white;">17/05/2024</td>
-              
-          </tr>
-
-          <tr>
-            <td style="text-align: center; color: white;">CHRIST(Deemed to be University), Bangalore</td>
-            <td style="text-align: center; color: white;">Dr Naveen J<br> <a href="mailto:naveen.j@christuniversity.in">naveen.j@christuniversity.in</a></td>
-            <td style="text-align: center; color: white;">31/05/2024</td>
-            
-        </tr>
-
-        <tr>
-          <td style="text-align: center; color: white;">New Horizon College of Engineering, Bangalore</td>
-          <td style="text-align: center; color: white;">Neha Jadhav<br> <a href="mailto:nehaj.nhce@newhorizonindia.edu">nehaj.nhce@newhorizonindia.edu</a></td>
-          <td style="text-align: center; color: white;">07/05/2024</td>
-          
-      </tr>
-
-      <tr>
-        <td style="text-align: center; color: white;">Mangalore Institute of Technology & Engineering, Mangalore</td>
-        <td style="text-align: center; color: white;">Ms. Shwetha V Bhat<br> <a href="mailto:shwethavbhat@mite.ac.in">shwethavbhat@mite.ac.in</a></td>
-        <td style="text-align: center; color: white;">10/5/2024</td>
-    </tr>
-
-    <tr>
-      <td style="text-align: center; color: white;">KLE Institute of Technology, Hubballi</td>
-      <td style="text-align: center; color: white;">Dr Girish Saunshi <br><a href="mailto:girish.saunshi@kleit.ac.in">girish.saunshi@kleit.ac.in</a></td>
-      <td style="text-align: center; color: white;">17/05/2024</td>
-        </tr>
-
-  </tbody>
-  </table>
-  </div>
-  </div>
-</div>
-</div>
-</section>
-</section>                         
-
-
-<section id="table" class="section-padding">
-  <div class="container">
-      <div class="row">
-          <div class="col-12">
-              <div class="section-title-header text-left">  
-<p style="font-size: x-large;">KERALA:</p>
-
-<div class="row">
-    <div class="col-12">
-        <div class="table-content">
-          <table style="width: 100%; table-layout: fixed;">
-            <thead>
-                <tr>
-                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
-                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
-                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
-                   
-                </tr>
-            </thead>
-          <tbody>
-            <tr>
-                <td style="text-align: center; color: white;">St Thomas College of Engineering and Technology, Kannur</td>
-                <td style="text-align: center; color: white;">Vaishakhi V K<br><a href="mailto:vaishakhi@stthomaskannur.ac.in">vaishakhi@stthomaskannur.ac.in</a></td>
-                <td style="text-align: center; color: white;">17/04/2024</td>
-                
-          </tr>
-
-          <tr>
-            <td style="text-align: center; color: white;">St Thomas College of Engineering and Technology, Chengannur</td>
-            <td style="text-align: center; color: white;">Dr Teena<br><a href="mailto:drteenajo@stthomascollege.ac.in">drteenajo@stthomascollege.ac.in</a></td>
-            <td style="text-align: center; color: white;">25/04/2024</td>
-            
-        </tr>
-
-        <tr>
-          <td style="text-align: center; color: white;">Amal Jyothi College of Engineering, Kottayam</td>
-          <td style="text-align: center; color: white;">Dr. Amal MR<br><a href="mailto:mramal@amaljyothi.ac.in">mramal@amaljyothi.ac.in</a></td>
-          <td style="text-align: center; color: white;">12/04/2024</td>
-          
-        </tr>
-          </tbody>
-        </table>
-    </div>
-</div>
-</div>
-</div>
-</section>
-</section>
-
-
-<section id="table" class="section-padding">
-  <div class="container">
-      <div class="row">
-          <div class="col-12">
-              <div class="section-title-header text-left">  
-<p style="font-size: x-large;">MAHARASHTRA:</p>
-<div class="row">
-    <div class="col-12">
-        <div class="table-content">
-          <table style="width: 100%; table-layout: fixed;">
-            <thead>
-                <tr>
-                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
-                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
-                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
-                    
-                </tr>
-            </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center; color: white;">JSPM University, Pune</td>
-              <td style="text-align: center; color: white;">Prof Anirudh Kelkar<br><a href="mailto:anirudha.erp@jspmuni.ac.in">anirudha.erp@jspmuni.ac.in</a></td>
-              <td style="text-align: center; color: white;">25/05/2024</td>
-                        </tr>
-          </tbody>
-        </table>
-    </div>
-</div>
-</div>
-</div>
-</section>
-</section>
-
-<section id="table" class="section-padding">
-  <div class="container">
-      <div class="row">
-          <div class="col-12">
-              <div class="section-title-header text-left">  
-<p style="font-size: x-large;">NCR:</p>
-<div class="row">
-    <div class="col-12">
-        <div class="table-content">
-          <table style="width: 100%; table-layout: fixed;">
-            <thead>
-                <tr>
-                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
-                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
-                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
-                    
-                </tr>
-            </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center; color: white;">GL Bajaj Institute of Technology & Management, Greater Noida</td>
-              <td style="text-align: center; color: white;">Dr. Pushpa<br><a href="mailto:pushpa_cse@glbitm.ac.in">pushpa_cse@glbitm.ac.in</a></td>
-              <td style="text-align: center; color: white;">27/04/2024</td>
-                        </tr>
-          <tr>
-            <td style="text-align: center; color: white;">Meerut Institute of Engineering & Technology, Meerut</td>
-            <td style="text-align: center; color: white;">Rahul Sharma<br><a href="mailto:sap.spoc@miet.ac.in">sap.spoc@miet.ac.in</a></td>
-            <td style="text-align: center; color: white;">27/05/2024</td>
-            
-          </tr>
-          </tbody>
-        </table>
-    </div>
-</div>
-</div>
-</div>
-</section>
-</section>
-
-
-<section id="table" class="section-padding">
-  <div class="container">
-      <div class="row">
-          <div class="col-12">
-              <div class="section-title-header text-left">  
-<p style="font-size: x-large;">PUNJAB:</p>
-<div class="row">
-    <div class="col-12">
-        <div class="table-content">
-          <table style="width: 100%; table-layout: fixed;">
-            <thead>
-                <tr>
-                    <th style="width: 33.33%; color: white;" class="text-center">College Name</th>
-                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
-                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
-                    
-                </tr>
-            </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center; color: white;">Chandigarh University, Chandigarh</td>
-              <td style="text-align: center; color: white;">Dr. Navpreet Kaur Walia<br><a href="mailto:batchhead4.cse@cumail.in">batchhead4.cse@cumail.in</a></td>
-              <td style="text-align: center; color: white;">24/04/2024</td>
-              
-          </tr>
-
-          <tr>
-            <td style="text-align: center; color: white;">Chandigarh Group of Colleges, Landran, Mohali</td>
-            <td style="text-align: center; color: white;">Mr. Sachin Majithia<br><a href="mailto:sachin.majithia@cgc.edu.in">sachin.majithia@cgc.edu.in</a><br>Dr. Kapil Mehta<br><a href="mailto:hod.dsc@cgc.edu.in">hod.dsc@cgc.edu.in</a></td>
-            <td style="text-align: center; color: white;">24/04/2024</td>
-                    </tr>
-
-        <tr>
-          <td style="text-align: center; color: white;">Lovely Professional University, Jalandhar</td>
-          <td style="text-align: center; color: white;">Avtar Singh<br><a href="mailto:avtar.singh@lpu.co.in">avtar.singh@lpu.co.in</a></td>
-          <td style="text-align: center; color: white;">26/04/2024</td>
-                  </tr>
-        </tbody>
-        </table>
-    </div>
-</div>
-</div>
-</div>
-</section>
-</section>
-
-
-<section id="table" class="section-padding">
-  <div class="container">
-      <div class="row">
-          <div class="col-12">
-              <div class="section-title-header text-left">  
-<p style="font-size: x-large;">RAJASTHAN:</p>
-<div class="row">
-    <div class="col-12">
-        <div class="table-content">
-          <table style="width: 100%; table-layout: fixed;">
-            <thead>
-                <tr>
-                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
-                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
-                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
-                    
-                </tr>
-            </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center; color: white;">Poornima University, Jaipur</td>
-              <td style="text-align: center; color: white;">Dr Ajay Khunteta<br><a href="mailto:dean.fce@poornima.edu.in">dean.fce@poornima.edu.in</a></td>
-              <td style="text-align: center; color: white;">08/04/2024</td>
-              
-          </tr>
-          </tbody>
-        </table>
-    </div>
-</div>
-</div>
-</div>
-</section>
-</section>
-
-<section id="table" class="section-padding">
-  <div class="container">
-      <div class="row">
-          <div class="col-12">
-              <div class="section-title-header text-left">  
-<p style="font-size: x-large;">TAMIL NADU:</p>
-<div class="row">
-    <div class="col-12">
-        <div class="table-content">
-          <table style="width: 100%; table-layout: fixed;">
-            <thead>
-                <tr>
-                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
-                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
-                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
-                    
-                </tr>
-            </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center; color: white;">Sri Sivasubramaniya Nadar College of Engineering, Chennai</td>
-              <td style="text-align: center; color: white;">Dr Suresh Jaganathan<br><a href="mailto:sureshj@ssn.edu.inn">sureshj@ssn.edu.in</a></td>
-              <td style="text-align: center; color: white;">03/05/2024</td>
+              <tr>
+                <td style="text-align: left; color: white;">Prabodhan Education Society's Vidya Prabodhini College of Commerce, Education Computer and Management Parvari-Goa</td>
+                <td style="text-align: center; color: white;"></td>
+                <td style="text-align: center; color: white;">09/06/2025</td>
               
             </tr>
 
-          <tr>
-            <td style="text-align: center; color: white;">Vellore Institute of Technology, Chennai</td>
-            <td style="text-align: center; color: white;">Dr. Praveen Joe I R<br><a href="mailto:praveen.joe@vit.ac.in">praveen.joe@vit.ac.in</a></td>
-            <td style="text-align: center; color: white;">18/04/2024</td>
-            
-          </tr>
+            <tr>
+              <td style="text-align: left; color: white;">Sant Sohirobanath Ambiye Government College of Arts and Commerce Virnoda, Pernem- Goa</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+            </tr>
+              
 
-        <tr>
-          <td style="text-align: center; color: white;">Rajalakshmi Engineering College, Chennai</td>
-          <td style="text-align: center; color: white;">Dr Kumar P<br> <a href="mailto:hod.cse@rajalakshmi.edu.in">hod.cse@rajalakshmi.edu.in</a></td>
-          <td style="text-align: center; color: white;">29/04/2024</td>
+          <tr>
+            <td style="text-align: left; color: white;">Government Polytechnic Panaji</td>
+            <td style="text-align: center; color: white;"></td>
+            <td></td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left; color: white;">Shree Rayeshwar Institute of Engineering and Information Technology</td>
+              <td style="text-align: center; color: white;"></td>
+             <td></td>
+              </tr>
+
+              <tr>
+                <td style="text-align: left; color: white;">Don Bosco College of Engineering</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: left; color: white;">Government Polytechnic Curchorem</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
                   </tr>
 
-      <tr>
-        <td style="text-align: center; color: white;">KPR Institute of Engineering and Technology, Coimbatore</td>
-        <td style="text-align: center; color: white;">Dr.T.Shanmugapriya <br><a href="mailto:shanmugapriya.t@kpriet.ac.in">shanmugapriya.t@kpriet.ac.in</a></td>
-        <td style="text-align: center; color: white;">25/04/2024</td>
-        
-    </tr>
+                  <tr>
+                    <td style="text-align: left; color: white;">VVM’s Shree Damodar College Of Commerce & Economics, Margao-Goa </td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
 
-    <tr>
-      <td style="text-align: center; color: white;">Thiagarajar College of Engineering, Madurai</td>
-      <td style="text-align: center; color: white;">Dr. Raja Lavanya<br><a href="mailto:rlit@tce.edu">rlit@tce.edu</a></td>
-      <td style="text-align: center; color: white;">16/04/2024</td>
-          </tr>
-    </tbody>
-    </table>
-    </div>
-</div>
-</div>
-</div>
+                    <tr>
+                      <td style="text-align: left; color: white;">Vasco Government Industrial Training Institute</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: left; color: white;">Fr.Agnel College of Arts and Commerce, Pilar, Goa</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left; color: white;">DCT’ Srinivassa Sinai Dempo College of Commerce and Economics</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+              </div>
 </section>
-</section>                
+</section>  
+
 
 <section id="table" class="section-padding">
   <div class="container">
       <div class="row">
           <div class="col-12">
-              <div class="section-title-header text-left">  
-<p style="font-size: x-large;">TELANGANA:</p>
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >ASSAM:</p>
+<p style="font-size: x-large; text-align: left">GUWAHATI</p>
 <div class="row">
     <div class="col-12">
         <div class="table-content">
@@ -828,15 +1688,74 @@
                     <th style="width: 33.33%; color: white;" class="text-center">College </th>
                     <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
                     <th style="width: 33.33%; color: white;" class="text-center">Date</th>
-                    
                 </tr>
             </thead>
           <tbody>
             <tr>
-              <td style="text-align: center; color: white;">G. Narayanamma Institute of Technology Science (for Women)</td>
-              <td style="text-align: center; color: white;">Ms. N. Hiranmai<br><a href="mailto:hiran.mechanical@gmail.com">hiran.mechanical@gmail.com</a></td>
-              <td style="text-align: center; color: white;">27/04/2024</td>
+              <td style="text-align: left; color: white;">NERIM Group of Institutions</td>
+              <td style="text-align: center; color: white;"></td>
+              <td style="text-align: center; color: white;">07/04/2025</td>
+            
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Royal Global University</td>
+            <td style="text-align: center; color: white;"></td>
+            <td></td>
+            
+          </tr>
+            
+
+        <tr>
+          <td style="text-align: left; color: white;">Assam Don Bosco University</td>
+          <td style="text-align: center; color: white;"></td>
+          <td></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: left; color: white;">Don Bosco College of Engineering and Technology</td>
+            <td style="text-align: center; color: white;"></td>
+           <td></td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left; color: white;">Assam Down Town University</td>
+              <td style="text-align: center; color: white;"></td>
+              <td></td>
+              </tr>
+
+              <tr>
+                <td style="text-align: left; color: white;">Girijananda Chowdhury Institute of Management & Technology</td>
+                <td style="text-align: center; color: white;"></td>
+                <td></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: left; color: white;">Royal School of Engineering & Technology</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td></td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: left; color: white;">Kaziranga University</td>
+                    <td style="text-align: center; color: white;"></td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left; color: white;">ASTU (Assam Science and Technology University)</td>
+                      <td style="text-align: center; color: white;"></td>
+                      <td></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: left; color: white;">Scholar's Institute of Technology and Management</td>
+                        <td style="text-align: center; color: white;"></td>
+                        <td></td>
                         </tr>
+                        <tr>
+                          <td style="text-align: left; color: white;">NETES Institute of Technology and Science</td>
+                          <td style="text-align: center; color: white;"></td>
+                          <td></td>
+                          </tr>                          
           </tbody>
         </table>
     </div>
@@ -844,8 +1763,278 @@
 </div>
 </div>
 </section>
-</section>
+</section> 
 
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >NORTH:</p>
+<p style="font-size: x-large; text-align: left">MEERUT</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">Meerut Institute of Engineering & Technology Meerut</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;"></td>
+                
+              </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+  </div>
+
+  <br><br>
+                  <p style="font-size: x-large; text-align: left">GREATER NOIDA</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">G L Bajaj Institute of Technology & Management, Greater Noida</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+
+                  <br><br>
+                  <p style="font-size: x-large; text-align: left">CHANDIGARH</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Chitkara University, Chandigarh</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+
+                              <tr>
+                                <td style="text-align: left; color: white;">Chandigarh University, Chandigarh</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td style="text-align: center; color: white;"></td>
+                              
+                            </tr> 
+                            <tr>
+                              <td style="text-align: left; color: white;">Chandigarh Group of Institutions</td>
+                              <td style="text-align: center; color: white;"></td>
+                              <td style="text-align: center; color: white;"></td>
+                            
+                          </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+
+                  <br><br>
+                  <p style="font-size: x-large; text-align: left">JALANDHAR</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Lovely Professional University, Jalandhar</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+
+                  <br><br>
+                  <p style="font-size: x-large; text-align: left">JAIPUR</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Poornima University, Jaipur</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+                              <tr>
+                                <td style="text-align: left; color: white;">Manipal University, Jaipur</td>
+                                <td style="text-align: center; color: white;"></td>
+                                <td style="text-align: center; color: white;"></td>
+                              
+                            </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+
+                  <br><br>
+                  <p style="font-size: x-large; text-align: left">PATIALA</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-content">
+                              <table style="width: 100%; table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                                        <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: left; color: white;">Thapar University - Sch of Maths & Comp Apps, Patiala</td>
+                                  <td style="text-align: center; color: white;"></td>
+                                  <td style="text-align: center; color: white;"></td>
+                                
+                              </tr> 
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  </div>
+              </div>            
+</section>
+</section> 
+
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >WEST:</p>
+<p style="font-size: x-large; text-align: left">PUNE</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">JSPM University, Pune</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;"></td>
+                
+              </tr>
+              <tr>
+                <td style="text-align: left; color: white;">COEP Technological University, Pune</td>
+                <td style="text-align: center; color: white;"></td>
+                <td style="text-align: center; color: white;"></td>
+              
+            </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+  </div>
+
+</section>
+</section> 
+
+<section id="table" class="section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-left">
+
+<p style="font-size: x-large; text-align: left" >EAST:</p>
+<p style="font-size: x-large; text-align: left">KOLKATA</p>
+<div class="row">
+    <div class="col-12">
+        <div class="table-content">
+          <table style="width: 100%; table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th style="width: 33.33%; color: white;" class="text-center">College </th>
+                    <th style="width: 33.33%; color: white;" class="text-center">SPOC</th>
+                    <th style="width: 33.33%; color: white;" class="text-center">Date</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: left; color: white;">Techo India University, Kolkata</td>
+                  <td style="text-align: center; color: white;"></td>
+                  <td style="text-align: center; color: white;"></td>
+                
+              </tr>
+              <tr>
+                <td style="text-align: left; color: white;">Sister Nivediata Unievsity, Kolkata</td>
+                <td style="text-align: center; color: white;"></td>
+                <td style="text-align: center; color: white;"></td>
+              
+            </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+  </div>
+
+</section>
+</section> 
 
  <!-- Ye extra hai badme delete kar dunga                                    
                                  
@@ -895,84 +2084,70 @@
                     
 
 <br><br><br><br>
-          <footer style="background-color: rgba(20, 20, 20, 0.786);">
-  <div class="container">
-    <div class="row justify-content-left" >
-        <div class="col-lg-8 col-md-12 col-xs-12">
-      
-        <div class="site-info">
-          <p align="left">Designed and Developed by 
-            <a href="https://swayamrao.me/" rel="nofollow">Swayam</a>,
-            <a href="https://www.linkedin.com/in/om-patil-789aa2247/" rel="nofollow">Om</a>,
-            <a href="https://www.linkedin.com/in/aryaman-prakash-323390259/" rel="nofollow">Aryaman</a>,
-            <a href="https://suryansh.one" rel="nofollow">Suryansh</a>
+<footer class="text-center text-white py-3" style="background-color: rgba(28, 28, 28, 0.95);">
+  <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; padding: 0 20px;">
+      <!-- Developer Info -->
+      <div style="text-align: left; position: relative; flex: 1 1 100%;">
+          <p class="mb-0 hover-box">
+              <span class="tooltip-trigger">
+                  Designed and Developed by PSG iTECH Team
+                  <span class="tooltip-text">
+                      <strong>Developer Team:</strong><br>
+                      1. <a href="https://www.linkedin.com/in/keerthi-vijaibabu-6b35802aa/" target="_blank" class="text-white">Keerthi V - Lead</a><br>
+                      2. <a href="https://www.linkedin.com/in/madhu-subhiksha-87499b282/" target="_blank" class="text-white">Madhu Subhiksha M.R</a><br>
+                      3. <a href="https://www.linkedin.com/in/rithanya-saravanan-8aa976289" target="_blank" class="text-white">Rithanya S</a><br>
+                      4. <a href="http://linkedin.com/in/nijapriya" target="_blank" class="text-white">Nija Priya S</a><br><br>
+                      
+                      <strong>Data Collection Team:</strong><br>
+                      1. <a href="https://www.linkedin.com/in/mythryee-arumugam-8290672b7" target="_blank" class="text-white">Mythryee A - Lead</a><br>
+                      2. <a href="https://www.linkedin.com/in/loohetha-p-7930b9298" target="_blank" class="text-white">Loohetha P</a><br>
+                      3. <a href="https://www.linkedin.com/in/santhiya-vasudevan" target="_blank" class="text-white">Santhiya V</a><br>
+                      4. <a href="https://www.linkedin.com/in/sandra-muralidharan-399bb032b" target="_blank" class="text-white">Sandra M</a>
+                  </span>
+              </span>
           </p>
-          <p align="left">Dept. of CS&E (AI & ML and Cyber Security), <a href="https://www.msrit.edu/">RIT</a></p>
-        </div>
       </div>
-    </div>
   </div>
 </footer>
 
                     <script>
-function toggleFilter() {
-  let filterBox = document.getElementById("filterContainer");
-  filterBox.style.display = filterBox.style.display === "block" ? "none" : "block";
-}
+                      // Set the date we're counting down to
+                      var countDownDate = new Date("Mar 9, 2024 23:59:59").getTime();
+                      
+                      // Update the count down every 1 second
+                      var x = setInterval(function() {
+                      
+                        // Get today's date and time
+                        var now = new Date().getTime();
+                      
+                        // Find the distance between now and the count down date
+                        var distance = countDownDate - now;
+                      
+                        // Time calculations for days, hours, minutes and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                      
+                        // Display the result in the element with id="demo"
+                        document.getElementById("count-days").innerHTML = ('0' + days).substr(-2) ;
+                        document.getElementById("count-hours").innerHTML = ('0' + hours).substr(-2) ;
+                        document.getElementById("count-mins").innerHTML = ('0' + minutes).substr(-2) ;
+                        document.getElementById("count-sec").innerHTML = ('0' + seconds).substr(-2) ;
+                      
+                        /* If the count down is finished, write some text
+                        if (distance < 10000) {
+                          clearInterval(x);
+                          document.getElementById("clock").innerHTML = "EXPIRED";
+                        }*/
+                      }, 1000);
+                      </script>
 
-document.addEventListener("DOMContentLoaded", function () {
-  const stateFilter = document.getElementById("stateFilter");
-  const cityFilter = document.getElementById("cityFilter");
-  const tables = document.querySelectorAll("#table table");
-  const sectionTitles = document.querySelectorAll("#table .section-title-header");
-  const noResultsMessage = document.createElement("p");
-  noResultsMessage.style.textAlign = "center";
-  noResultsMessage.style.color = "white";
-  noResultsMessage.style.display = "none";
-  noResultsMessage.textContent = "No matching results found.";
-  document.querySelector("#table").appendChild(noResultsMessage);
+                    <!-- Go to Top Link -->
+                    <a href="#" class="back-to-top">
+                    	<i class="lni-chevron-up"></i>
+                    </a>
 
-  function filterTable() {
-    const stateValue = stateFilter.value.trim().toLowerCase();
-    const cityValue = cityFilter.value.trim().toLowerCase();
-    let hasVisibleTables = false;
-
-    tables.forEach((table, index) => {
-      const rows = table.querySelectorAll("tbody tr");
-      let hasVisibleRows = false;
-
-      rows.forEach((row) => {
-        const collegeName = row.cells[0].textContent.trim().toLowerCase();
-        const spocName = row.cells[1].textContent.trim().toLowerCase();
-        const stateText = table.closest("section").querySelector("p").textContent.trim().toLowerCase();
-
-        const matchesState = stateValue === "" || stateText.includes(stateValue);
-        const matchesCity = cityValue === "" || collegeName.includes(cityValue);
-
-        if (matchesState && matchesCity) {
-          row.style.display = "";
-          hasVisibleRows = true;
-        } else {
-          row.style.display = "none";
-        }
-      });
-
-      table.style.display = hasVisibleRows ? "" : "none";
-      if (sectionTitles[index]) {
-        sectionTitles[index].style.display = hasVisibleRows ? "block" : "none";
-      }
-      if (hasVisibleRows) hasVisibleTables = true;
-    });
-
-    noResultsMessage.style.display = hasVisibleTables ? "none" : "block";
-  }
-
-  stateFilter.addEventListener("change", filterTable);
-  cityFilter.addEventListener("change", filterTable);
-});
-
-
-                    </script>
                     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
                     <script src="assets/js/jquery-min.js"></script>
                     <script src="assets/js/popper.min.js"></script>
