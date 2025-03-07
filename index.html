@@ -98,27 +98,36 @@
                   Partners
                 </a>
               </li>
-            </li>
-            <li class="nav-item has-menu">
-             <a href="#" class="nav-link">
-               Previous Events
-             </a>
-             <ul class="submenu">
-              <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
-              <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
-              <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
-             </ul>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hackfest2022.html">
+                  Hackfest 2022
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./hackfest2023.html">
+                  Hackfest 2023
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="./hackfest2024.html">
+                  Hackfest 2024
+                </a>
+              </li>
+            
               <li class="nav-item">
                 <a class="nav-link" href="./faq.html">
                   FAQ
                 </a>
+              </li>
               
          
             </ul>
             </div>
         </div>
       </nav>
+      </header>
       <!-- Navbar End -->
 
       <!-- Hero Area Start -->
@@ -474,7 +483,7 @@
                     <!-- <script src="timeline.css"></script> -->
                     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
-<script>
+<!-- <script>
   document.addEventListener("DOMContentLoaded", function () {
       var menuItems = document.querySelectorAll(".has-menu > a");
   
@@ -512,6 +521,49 @@
           });
       });
   });
+  </script> -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let dropdownItems = document.querySelectorAll(".nav-item.has-menu > a");
+
+    dropdownItems.forEach((item) => {
+        item.addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            
+            let parent = this.parentElement; // Get parent <li> element
+            let submenu = parent.querySelector(".submenu");
+
+            // Close all other submenus
+            document.querySelectorAll(".submenu").forEach((menu) => {
+                if (menu !== submenu) {
+                    menu.style.display = "none";
+                    menu.parentElement.classList.remove("active");
+                }
+            });
+
+            // Toggle current submenu
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+                parent.classList.remove("active");
+            } else {
+                submenu.style.display = "block";
+                parent.classList.add("active");
+            }
+        });
+    });
+
+    // Close submenu when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!e.target.closest(".nav-item.has-menu")) {
+            document.querySelectorAll(".submenu").forEach((menu) => {
+                menu.style.display = "none";
+                menu.parentElement.classList.remove("active");
+            });
+        }
+    });
+});
+
   </script>
     
   </body>

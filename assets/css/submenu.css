@@ -1,4 +1,4 @@
-.submenu {
+/* .submenu {
   display: none;
   position: absolute;
   background-color: black;
@@ -8,16 +8,58 @@
   z-index: 1000;
 }
 
-/* Show submenu when 'show' class is added */
+/* Show submenu when 'show' class is added 
 .submenu.show {
   display: block !important;
 }
 
-/* Mobile-friendly submenu positioning */
+/* Mobile-friendly submenu positioning 
 @media (max-width: 991px) {
   .submenu {
     position: relative;
     width: 100%;
     box-shadow: none;
   }
+} */
+
+
+/* Ensure submenu is positioned properly */
+.nav-item {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: black;
+  padding: 10px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+/* Show submenu on hover for desktops */
+.nav-item:hover .submenu {
+  display: block;
+}
+
+
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .submenu {
+      position: static;
+      display: none;
+      background: black;
+      width: 100%;
+  }
+  
+  .nav-item.active .submenu {
+      display: block;
+  }
+
+  .nav-item.active .submenu {
+    display: block !important;
+}
 }
