@@ -45,6 +45,22 @@
     text-align: center;
     color: white;
   }
+  .filter-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .filter-container select {
+    margin-right: 10px;
+    padding: 5px;
+  }
+
+  .filter-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
 </style>
 
 <body>
@@ -134,7 +150,20 @@
         target="_blank">
         CLICK HERE </a> to sign in and join the excitement.</p>
 
-
+        <div class="filter-container">
+          <select id="stateFilter" onchange="updateCityOptions()">
+            <option value="">Select State</option>
+            <option value="Tamilnadu">Tamilnadu</option>
+            <!-- Add more states if needed -->
+          </select>
+        
+          <select id="cityFilter" onchange="filterTable()">
+            <option value="">Select City</option>
+          </select>
+        
+          <i class="fa fa-search filter-icon"></i>
+        </div>
+        
 
     <section id="table" class="section-padding">
       <div class="container">
@@ -2237,6 +2266,55 @@
 
       gtag('config', 'G-53G2KQPBY4');
     </script>
+
+<script>
+  const cityData = {
+    "Tamilnadu": ["Chennai", "Coimbatore", "Salem", "Madurai"]
+  };
+
+  function updateCityOptions() {
+    const state = document.getElementById("stateFilter").value;
+    const citySelect = document.getElementById("cityFilter");
+
+    citySelect.innerHTML = '<option value="">Select City</option>';
+    
+    if (state && cityData[state]) {
+      cityData[state].forEach(city => {
+        const option = document.createElement("option");
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    }
+
+    filterTable(); // Reset table when changing state
+  }
+
+  function filterTable() {
+    const selectedCity = document.getElementById("cityFilter").value.toLowerCase();
+    const tables = document.querySelectorAll(".table-content table");
+
+    tables.forEach(table => {
+      const sectionTitle = table.closest(".table-content").previousElementSibling;
+      const cityName = sectionTitle.textContent.trim().toLowerCase();
+      const isVisible = selectedCity === "" || cityName === selectedCity;
+      
+      table.closest(".table-content").style.display = isVisible ? "" : "none";
+      sectionTitle.style.display = isVisible ? "" : "none";
+    });
+  }
+</script>
+<script>
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+      let filter = this.value.toLowerCase();
+      let rows = document.querySelectorAll("#collegeTable tbody tr");
+
+      rows.forEach(row => {
+        let text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
 
 </body>
 
