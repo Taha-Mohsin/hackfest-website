@@ -1,85 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Excel to Table</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+      <title>Register Now!</title>
+  
+      <!--Mene kiya hai--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
+      <!-- Icon -->
+      <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css">
+      <!-- Nivo Lightbox -->
+      <link rel="stylesheet" type="text/css" href  ="assets/css/nivo-lightbox.css" >
+      <!-- Animate -->
+      <link rel="stylesheet" tygitpe="text/css" href="assets/css/animate.css">
+      <!-- Main Style -->
+      <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+      <!-- Responsive Style -->
+      <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+      <link rel="shortcut icon" type="image/jpg" href="assets/img/codecell-logo.png"/>
+      <link rel="stylesheet" href="assets/css/submenu.css">
+      <link rel="stylesheet" href="assets/css/timeline.css">
+  
     <style>
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-      }
-      th,
-      td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
+      /* Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: black;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 12px;
+    text-align: center;
+    color: white;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+}
+
+
+/* Dropdown and Button Styling */
+select, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+select:focus, button:hover {
+    border-color: #00aaff;
+    color: #00aaff;
+}
+
+/* Filter Controls */
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
     </style>
   </head>
   <body>
-    <h2>Upload an Excel File</h2>
-    <input type="file" id="excelFile" accept=".xls,.xlsx" />
-    <br /><br />
-    <table id="excelTable">
-      <thead></thead>
-      <tbody></tbody>
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+        <div id="nav-container" class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a href="index.html" class="navbar-brand"><img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt=""></a>       
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="lni-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              
+              <li class="nav-item  has-menu">
+                <!-- <divc class="has-menu"> -->
+                  <a class="nav-link" href = "index.html">
+                    Home
+                  </a>
+                  <ul class="submenu">
+                    <li class="nav-item"><a class="nav-link" href="#e">Event Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#p">Prize Money</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#t">Themes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#g">Guidelines</a></li>
+                  </ul>
+                  
+                <!-- </div> -->
+                </li>
+    
+              <li class="nav-item">
+                <!-- <a class="nav-link" href="#about"> -->
+                <a class="nav-link" href="about.html">
+                  Themes
+                </a>
+              </li>        
+              <li class="nav-item">
+                <a class="nav-link" href="./partners.html">
+                  Partners
+                </a>
+              </li>
+            </li>
+            <li class="nav-item has-menu">
+             <a href="#" class="nav-link">
+               Previous Events
+             </a>
+             <ul class="submenu">
+              <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
+              <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
+              <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
+             </ul>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./faq.html">
+                  FAQ
+                </a>
+              
+         
+            </ul>
+            </div>
+        </div>
+      </nav>
+    </header>    
+
+    <br>
+
+    <section id="table" class="section-padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="section-title-header text-center">
+                      <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s" style="color: white;">Regional Round</h2>
+                  </div>
+              </div>
+          </div>
+    </section>
+
+    <p style="text-align: center;letter-spacing: 1px;font-size: 20px;">Hackfest25 is here in your city and colleges!  <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLScOjMX7XmbtMQ_oqPxK7jPQdOUFwq-zGXoLDiMutGqe8dPPiA/viewform" target="_blank"
+    >
+      CLICK HERE </a> to register and join the excitement.</p>  
+
+    <label for="stateFilter">Select State:</label>
+    <select id="stateFilter" onchange="updateHubOptions()">
+      <option value="">All States</option>
+    </select>
+
+    <label for="hubFilter">Select Hub:</label>
+    <select id="hubFilter">
+      <option value="">All Hubs</option>
+    </select>
+
+    <button onclick="applyFilters()">Filter</button>
+
+    <table id="collegeTable">
+      <thead>
+        <tr>
+          <th>College</th>
+          <th>Spoc</th>
+          <th>Date</th>
+          <!-- <th>Date</th>
+          <th>College</th>
+          <th>SPOC</th> -->
+        </tr>
+      </thead>
+      <tbody> </tbody>
     </table>
 
     <script>
-      document
-        .getElementById("excelFile")
-        .addEventListener("change", function (event) {
-          let file = event.target.files[0]; // Get uploaded file
-          let reader = new FileReader();
+      let collegeData = [];
+        let stateHubMap = {};
 
-          reader.onload = function (event) {
-            let data = new Uint8Array(event.target.result);
-            let workbook = XLSX.read(data, { type: "array" });
+        async function loadColleges() {
+            try {
+                let response = await fetch("/assets/data/Hackfest_2025_College_List.json"); // Update with correct file path
+                let jsonData = await response.json();
+                collegeData = jsonData["Sheet1"]; // Accessing 'Sheet1'
+                extractStateHubMapping();
+                populateStateOptions();
+                displayData(collegeData);
+            } catch (error) {
+                console.error("Error loading JSON:", error);
+            }
+        }
 
-            let sheetName = workbook.SheetNames[0]; // Get first sheet name
-            let sheet = workbook.Sheets[sheetName];
+        function extractStateHubMapping() {
+            stateHubMap = {};
+            collegeData.forEach(college => {
+                if (!stateHubMap[college.State]) {
+                    stateHubMap[college.State] = new Set();
+                }
+                stateHubMap[college.State].add(college.hub);
+            });
+        }
 
-            let jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 }); // Convert to JSON
+        function populateStateOptions() {
+            let stateFilter = document.getElementById("stateFilter");
+            if (!stateFilter) {
+                console.error("State filter dropdown not found!");
+                return;
+            }
+            stateFilter.innerHTML = '<option value="">All States</option>';
+            Object.keys(stateHubMap).forEach(state => {
+                let option = document.createElement("option");
+                option.value = state;
+                option.textContent = state;
+                stateFilter.appendChild(option);
+            });
+        }
 
-            let table = document.getElementById("excelTable");
-            let thead = table.querySelector("thead");
-            let tbody = table.querySelector("tbody");
+        function updateHubOptions() {
+            let stateFilter = document.getElementById("stateFilter").value;
+            let hubFilter = document.getElementById("hubFilter");
+            if (!hubFilter) {
+                console.error("Hub filter dropdown not found!");
+                return;
+            }
+            hubFilter.innerHTML = '<option value="">All Hubs</option>';
 
-            // Clear previous table content
-            thead.innerHTML = "";
+            if (stateFilter && stateHubMap[stateFilter]) {
+                stateHubMap[stateFilter].forEach(hub => {
+                    let option = document.createElement("option");
+                    option.value = hub;
+                    option.textContent = hub;
+                    hubFilter.appendChild(option);
+                });
+            }
+        }
+
+        function applyFilters() {
+            let stateFilter = document.getElementById("stateFilter").value;
+            let hubFilter = document.getElementById("hubFilter").value;
+
+            let filteredData = collegeData.filter(college => {
+                return (stateFilter === "" || college.State === stateFilter) &&
+                       (hubFilter === "" || college.hub === hubFilter);
+            });
+
+            displayData(filteredData);
+        }
+
+        function displayData(data) {
+            let tbody = document.querySelector("#collegeTable tbody");
+            if (!tbody) {
+                console.error("Table body not found! Ensure #collegeTable exists in the HTML.");
+                return;
+            }
             tbody.innerHTML = "";
 
-            // Populate table headers
-            if (jsonData.length > 0) {
-              let headerRow = document.createElement("tr");
-              jsonData[0].forEach((header) => {
-                let th = document.createElement("th");
-                th.textContent = header;
-                headerRow.appendChild(th);
-              });
-              thead.appendChild(headerRow);
-            }
-
-            // Populate table rows
-            jsonData.slice(1).forEach((rowData) => {
-              let row = document.createElement("tr");
-              rowData.forEach((cellData) => {
-                let td = document.createElement("td");
-                td.textContent = cellData;
-                row.appendChild(td);
-              });
-              tbody.appendChild(row);
+            data.forEach(college => {
+                let row = `<tr>
+                    <td>${college.college}</td>
+                    <td>${" "}</td>
+                    <td>${college.Date}</td>
+                </tr>`;
+                tbody.innerHTML += row;
             });
-          };
+        }
 
-          reader.readAsArrayBuffer(file);
+        document.addEventListener("DOMContentLoaded", function () {
+            loadColleges();
         });
     </script>
+    <script src="assets/js/jquery-min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/nivo-lightbox.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/main.js"></script>      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
+
   </body>
 </html>
