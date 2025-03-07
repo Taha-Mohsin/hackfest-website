@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Excel to Table</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <title>College Filter</title>
     <style>
       table {
         width: 100%;
@@ -23,63 +22,84 @@
     </style>
   </head>
   <body>
-    <h2>Upload an Excel File</h2>
-    <input type="file" id="excelFile" accept=".xls,.xlsx" />
-    <br /><br />
-    <table id="excelTable">
-      <thead></thead>
+    <h2>Filter Colleges</h2>
+
+    <label for="stateFilter">Select State:</label>
+    <select id="stateFilter">
+      <option value="">All States</option>
+      <option value="Karnataka">Karnataka</option>
+    </select>
+
+    <label for="hubFilter">Select Hub:</label>
+    <select id="hubFilter">
+      <option value="">All Hubs</option>
+      <option value="Bangalore">Bangalore</option>
+    </select>
+
+    <button onclick="applyFilters()">Filter</button>
+
+    <table id="collegeTable">
+      <thead>
+        <tr>
+          <th>Sl No</th>
+          <th>State</th>
+          <th>Hub</th>
+          <th>Date</th>
+          <th>College</th>
+          <th>SPOC</th>
+        </tr>
+      </thead>
       <tbody></tbody>
     </table>
 
     <script>
-      document
-        .getElementById("excelFile")
-        .addEventListener("change", function (event) {
-          let file = event.target.files[0]; // Get uploaded file
-          let reader = new FileReader();
+      let collegeData = [];
 
-          reader.onload = function (event) {
-            let data = new Uint8Array(event.target.result);
-            let workbook = XLSX.read(data, { type: "array" });
+      async function loadColleges() {
+        try {
+          let response = await fetch(
+            "./assets/data/Hackfest_2025_College_List.json"
+          ); // Update with correct file path
+          let jsonData = await response.json();
+          collegeData = jsonData["Sheet1"]; // Accessing 'Sheet1'
+          displayData(collegeData);
+        } catch (error) {
+          console.error("Error loading JSON:", error);
+        }
+      }
 
-            let sheetName = workbook.SheetNames[0]; // Get first sheet name
-            let sheet = workbook.Sheets[sheetName];
+      function applyFilters() {
+        let stateFilter = document.getElementById("stateFilter").value;
+        let hubFilter = document.getElementById("hubFilter").value;
 
-            let jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 }); // Convert to JSON
-
-            let table = document.getElementById("excelTable");
-            let thead = table.querySelector("thead");
-            let tbody = table.querySelector("tbody");
-
-            // Clear previous table content
-            thead.innerHTML = "";
-            tbody.innerHTML = "";
-
-            // Populate table headers
-            if (jsonData.length > 0) {
-              let headerRow = document.createElement("tr");
-              jsonData[0].forEach((header) => {
-                let th = document.createElement("th");
-                th.textContent = header;
-                headerRow.appendChild(th);
-              });
-              thead.appendChild(headerRow);
-            }
-
-            // Populate table rows
-            jsonData.slice(1).forEach((rowData) => {
-              let row = document.createElement("tr");
-              rowData.forEach((cellData) => {
-                let td = document.createElement("td");
-                td.textContent = cellData;
-                row.appendChild(td);
-              });
-              tbody.appendChild(row);
-            });
-          };
-
-          reader.readAsArrayBuffer(file);
+        let filteredData = collegeData.filter((college) => {
+          return (
+            (stateFilter === "" || college.State === stateFilter) &&
+            (hubFilter === "" || college.hub === hubFilter)
+          );
         });
+
+        displayData(filteredData);
+      }
+
+      function displayData(data) {
+        let tbody = document.querySelector("#collegeTable tbody");
+        tbody.innerHTML = "";
+
+        data.forEach((college) => {
+          let row = `<tr>
+                    <td>${college["Sl No"]}</td>
+                    <td>${college.State}</td>
+                    <td>${college.hub}</td>
+                    <td>${college.Date}</td>
+                    <td>${college.college}</td>
+                    <td>${college.SPOC}</td>
+                </tr>`;
+          tbody.innerHTML += row;
+        });
+      }
+
+      window.onload = loadColleges;
     </script>
   </body>
 </html>
