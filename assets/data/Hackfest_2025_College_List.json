@@ -621,7 +621,7 @@
           "State": "Kerala",
           "hub": "Cochin",
           "Date": "June 02nd Week",
-          "college": "College of Engineering, Chengannoor",
+          "college": "College of Engineering, Chengannur",
           "SPOC": " - "
       },
       {
@@ -629,7 +629,7 @@
           "State": "Kerala",
           "hub": "Cochin",
           "Date": "June 02nd Week",
-          "college": "College of Engineering, Kalloopara",
+          "college": "College of Engineering, Kallooppara",
           "SPOC": " - "
       },
       {
@@ -653,7 +653,7 @@
           "State": "Kerala",
           "hub": "Cochin",
           "Date": "June 02nd Week",
-          "college": "Kristhujyothi College of Management",
+          "college": "Kristu Jyoti College of Management and Technology",
           "SPOC": " - "
       },
       {
@@ -669,7 +669,7 @@
           "State": "Kerala",
           "hub": "Cochin",
           "Date": "June 02nd Week",
-          "college": "Sree Narayana Gurukulam College of Engineering, Kolenchery, Kadayirippu",
+          "college": "Sree Narayana Gurukulam College of Engineering, Kolenchery, Kadayiruppu",
           "SPOC": " - "
       },
       {
@@ -813,7 +813,7 @@
           "State": "Telengana",
           "hub": "Hyderabad",
           "Date": "April 14th",
-          "college": "Gokaraju Rangaraju Institue of Engineering and Technology",
+          "college": "Gokaraju Rangaraju Institute of Engineering and Technology",
           "SPOC": " - "
       },
       {
@@ -917,7 +917,7 @@
           "State": "Andhra Pradesh",
           "hub": "Tirupati",
           "Date": "March 31st",
-          "college": "Mohanbabu University",
+          "college": "Mohan Babu University",
           "SPOC": " - "
       },
       {
@@ -1016,14 +1016,7 @@
           "college": "Vignan's Institute of Information Technology",
           "SPOC": " - "
       },
-      {
-          "Sl No": 128,
-          "State": "Andhra Pradesh",
-          "hub": "Vizag",
-          "Date": "April 07th",
-          "college": "Raghu Engineering College",
-          "SPOC": " - "
-      },
+      
       {
           "Sl No": 129,
           "State": "Andhra Pradesh",
@@ -1061,7 +1054,7 @@
           "State": "Andhra Pradesh",
           "hub": "Vizag",
           "Date": "April 07th",
-          "college": "Vishaka Institue of Engineering and Technology",
+          "college": "Vishaka Institute of Engineering and Technology",
           "SPOC": " - "
       },
       {
@@ -1077,7 +1070,7 @@
           "State": "Andhra Pradesh",
           "hub": "Vizag",
           "Date": "April 07th",
-          "college": "Anil Neerukonda Institute of Techonology and Sciences (ANITS)",
+          "college": "Anil Neerukonda Institute of Technology and Sciences (ANITS)",
           "SPOC": " - "
       },
       {
@@ -1205,7 +1198,7 @@
           "State": "Andhra Pradesh",
           "hub": "Vijayawada",
           "Date": "April 14th",
-          "college": "Chalpathi Institue of Technology",
+          "college": "Chalapathi Institute of Technology",
           "SPOC": " - "
       },
       {
@@ -1229,7 +1222,7 @@
           "State": "Andhra Pradesh",
           "hub": "Kurnool",
           "Date": "April 02nd",
-          "college": "Vishaka Institue of Engineering and Technology College",
+          "college": "Visakha Institute of Engineering and Technology College",
           "SPOC": " - "
       },
       {
@@ -1653,7 +1646,7 @@
           "State": "East",
           "hub": "Kolkata",
           "Date": "New Colleges Propsoed",
-          "college": "Techo India University, Kolkata",
+          "college": "Tecnho India University, Kolkata",
           "SPOC": " - "
       },
       {
@@ -1661,7 +1654,7 @@
           "State": "East",
           "hub": "Kolkata",
           "Date": "New Colleges Propsoed",
-          "college": "Sister Nivediata Unievsity, Kolkata",
+          "college": "Sister Nivedita University, Kolkata",
           "SPOC": " - "
       }
   ]
