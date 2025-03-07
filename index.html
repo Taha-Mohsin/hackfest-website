@@ -475,12 +475,44 @@
                     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-53G2KQPBY4');
-</script>
-
-                  </body>
-                </html>
+  document.addEventListener("DOMContentLoaded", function () {
+      var menuItems = document.querySelectorAll(".has-menu > a");
+  
+      menuItems.forEach(function (menuItem) {
+          menuItem.addEventListener("click", function (e) {
+              if (window.innerWidth < 992) { // Apply only on mobile
+                  e.preventDefault(); // Prevent default anchor behavior
+  
+                  let parentLi = this.parentElement;
+                  let submenu = parentLi.querySelector(".submenu");
+  
+                  if (submenu) {
+                      let isOpen = submenu.classList.contains("show");
+  
+                      // Close all other submenus before opening the selected one
+                      document.querySelectorAll(".submenu").forEach(function (sub) {
+                          if (sub !== submenu) {
+                              sub.classList.remove("show");
+                          }
+                      });
+  
+                      // Toggle only the clicked submenu
+                      if (!isOpen) {
+                          submenu.classList.add("show");
+                      }
+                  }
+              }
+          });
+      });
+  
+      // Prevent Bootstrap from collapsing the navbar when clicking submenu links
+      document.querySelectorAll(".submenu a").forEach(function (submenuLink) {
+          submenuLink.addEventListener("click", function (e) {
+              e.stopPropagation(); // Prevent event from bubbling up
+          });
+      });
+  });
+  </script>
+    
+  </body>
+</html>

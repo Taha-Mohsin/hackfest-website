@@ -1,45 +1,23 @@
-.has-menu {
-  position: relative;
-  display: inline-block;
-}
-
 .submenu {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 170px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 10px;
-  z-index: 1;
   background-color: black;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
 }
 
-.has-menu:hover .submenu {
-  display: block;
+/* Show submenu when 'show' class is added */
+.submenu.show {
+  display: block !important;
 }
 
-
-.some-mobile{
-  display: none;
-}
-
-.some-mobile li{
-  display : none;
-}
-
-.some-mobile a{
-  display: none;
-}
+/* Mobile-friendly submenu positioning */
 @media (max-width: 991px) {
-  .dropdown-menu {
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-
-  .dropdown-menu.show {
-    opacity: 1;
-    visibility: visible;
+  .submenu {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
   }
 }
