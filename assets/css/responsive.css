@@ -223,12 +223,60 @@
     min-width: 5rem;
     padding: 18px 20px;
   }
+
+  .some-menu{
+    display: inline-block;
+  }
+
+  .some-menu a{
+    display: inline-block;
+  }
+
+  .some-menu li{
+    display: inline-block;
+  }
+
+  .mobile-dep{
+    display: none;
+  }
+
+  .mobile-dep a{
+    display: none;
+  }
+
+  .mobile-dep li{
+    display: none;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .btn {
     padding: 5px 7px;
     font-size: 13px;
+    
+  }
+  .some-menu{
+    display: block;
+  }
+
+  .some-menu a{
+    display: block;
+  }
+
+  .some-menu li{
+    display: block;
+  }
+
+  .mobile-dep{
+    display: none;
+  }
+
+  .mobile-dep a{
+    display: none;
+  }
+
+  .mobile-dep li{
+    display: none;
   }
 }
 

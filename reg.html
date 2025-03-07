@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel to Table</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Upload an Excel File</h2>
+    <input type="file" id="excelFile" accept=".xls,.xlsx" />
+    <br /><br />
+    <table id="excelTable">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      document
+        .getElementById("excelFile")
+        .addEventListener("change", function (event) {
+          let file = event.target.files[0]; // Get uploaded file
+          let reader = new FileReader();
+
+          reader.onload = function (event) {
+            let data = new Uint8Array(event.target.result);
+            let workbook = XLSX.read(data, { type: "array" });
+
+            let sheetName = workbook.SheetNames[0]; // Get first sheet name
+            let sheet = workbook.Sheets[sheetName];
+
+            let jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 }); // Convert to JSON
+
+            let table = document.getElementById("excelTable");
+            let thead = table.querySelector("thead");
+            let tbody = table.querySelector("tbody");
+
+            // Clear previous table content
+            thead.innerHTML = "";
+            tbody.innerHTML = "";
+
+            // Populate table headers
+            if (jsonData.length > 0) {
+              let headerRow = document.createElement("tr");
+              jsonData[0].forEach((header) => {
+                let th = document.createElement("th");
+                th.textContent = header;
+                headerRow.appendChild(th);
+              });
+              thead.appendChild(headerRow);
+            }
+
+            // Populate table rows
+            jsonData.slice(1).forEach((rowData) => {
+              let row = document.createElement("tr");
+              rowData.forEach((cellData) => {
+                let td = document.createElement("td");
+                td.textContent = cellData;
+                row.appendChild(td);
+              });
+              tbody.appendChild(row);
+            });
+          };
+
+          reader.readAsArrayBuffer(file);
+        });
+    </script>
+  </body>
+</html>

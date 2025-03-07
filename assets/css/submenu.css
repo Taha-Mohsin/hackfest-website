@@ -17,3 +17,16 @@
 .has-menu:hover .submenu {
   display: block;
 }
+
+
+.some-mobile{
+  display: none;
+}
+
+.some-mobile li{
+  display : none;
+}
+
+.some-mobile a{
+  display: none;
+}
