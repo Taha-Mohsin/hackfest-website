@@ -55,11 +55,5 @@
       width: 100%;
   }
   
-  .nav-item.active .submenu {
-      display: block;
-  }
 
-  .nav-item.active .submenu {
-    display: block !important;
-}
 }
