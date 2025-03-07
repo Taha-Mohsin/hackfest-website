@@ -14,7 +14,16 @@
     <title>Hackfest 2025</title>
 
 
-    <!--Mene kiya hai--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/jquery.nav.js"></script>
+
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
     <!-- Icon -->
@@ -61,65 +70,62 @@
 
     <!-- Header Area wrapper Starts -->
     <header id="header-wrap">
-      <!-- Navbar Start -->
       <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
         <div id="nav-container" class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a href="index.html" class="navbar-brand"><img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt=""></a>       
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Brand and Toggle -->
+          <a href="index.html" class="navbar-brand">
+            <img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt="">
+          </a>       
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="lni-menu"></i>
           </button>
+    
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+            <ul class="navbar-nav ms-auto">
               
-              <li class="nav-item active has-menu">
-                <!-- <divc class="has-menu"> -->
-                  <a class="nav-link" href = "index.html">
-                    Home
-                  </a>
-                  <ul class="submenu">
-                    <li class="nav-item"><a class="nav-link" href="#e">Event Schedule</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#p">Prize Money</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#t">Themes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#g">Guidelines</a></li>
-                  </ul>
-                  
-                <!-- </div> -->
-                </li>
-
-              <li class="nav-item">
-                <!-- <a class="nav-link" href="#about"> -->
-                <a class="nav-link" href="about.html">
-                  Themes
+              <!-- Home with Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Home
                 </a>
+                <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                  <li><a class="dropdown-item" href="#e">Event Schedule</a></li>
+                  <li><a class="dropdown-item" href="#p">Prize Money</a></li>
+                  <li><a class="dropdown-item" href="#t">Themes</a></li>
+                  <li><a class="dropdown-item" href="#g">Guidelines</a></li>
+                </ul>
+              </li>
+    
+              <!-- Other Menu Items -->
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Themes</a>
               </li>        
               <li class="nav-item">
-                <a class="nav-link" href="./partners.html">
-                  Partners
-                </a>
+                <a class="nav-link" href="./partners.html">Partners</a>
               </li>
-            </li>
-            <li class="nav-item has-menu">
-             <a href="#" class="nav-link">
-               Previous Events
-             </a>
-             <ul class="submenu">
-              <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
-              <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
-              <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
-             </ul>
-            </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./faq.html">
-                  FAQ
+    
+              <!-- Previous Events with Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Previous Events
                 </a>
-              
-         
+                <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                  <li><a class="dropdown-item" href="hackfest2022.html">Hackfest 2022</a></li>
+                  <li><a class="dropdown-item" href="hackfest2023.html">Hackfest 2023</a></li>
+                  <li><a class="dropdown-item" href="hackfest2024.html">Hackfest 2024</a></li>
+                </ul>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="./faq.html">FAQ</a>
+              </li>
+    
             </ul>
-            </div>
+          </div>
         </div>
       </nav>
-      <!-- Navbar End -->
+    </header>
+       <!-- Navbar End -->
 
       <!-- Hero Area Start -->
       <div id="hero-area" class="hero-area-bg">
@@ -465,21 +471,61 @@
                     <script src="assets/js/waypoints.min.js"></script>
                     <script src="assets/js/jquery.counterup.min.js"></script>
                     <script src="assets/js/jquery.nav.js"></script>
-		    <script src="assets/js/wow.js"></script>
+		                <script src="assets/js/wow.js"></script>
                     <script src="assets/js/jquery.easing.min.js"></script>
                     <script src="assets/js/nivo-lightbox.js"></script>
-                    <script src="assets/js/video.js"></script>
+                    <!-- <script src="assets/js/video.js"></script> -->
                     <script src="assets/js/main.js"></script>      
                     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
                     <!-- <script src="timeline.css"></script> -->
                     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-53G2KQPBY4');
+
+  document.addEventListener("DOMContentLoaded", function () {
+  let dropdownItems = document.querySelectorAll(".has-menu > a");
+
+  dropdownItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent link from navigating
+      let submenu = this.nextElementSibling; // Get the submenu
+
+      // Close all other submenus
+      document.querySelectorAll(".submenu").forEach((menu) => {
+        if (menu !== submenu) {
+          menu.style.display = "none";
+        }
+      });
+
+      // Toggle visibility of clicked submenu
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  // Prevent submenu clicks from closing the navbar
+  document.querySelectorAll(".submenu a").forEach((submenuLink) => {
+    submenuLink.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+
+  // Close submenu if clicking outside
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".has-menu")) {
+      document.querySelectorAll(".submenu").forEach((menu) => {
+        menu.style.display = "none";
+      });
+    }
+  });
+});
+
+
+
 </script>
 
                   </body>

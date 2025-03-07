@@ -21,6 +21,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <link rel="shortcut icon" type="image/jpg" href="assets/img/codecell-logo.png"/>
 
+    <link rel="stylesheet" href="assets/css/submenu.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
+    
+
   </head>
   <style>
     .faq-list .card-header .btn-link {
@@ -68,9 +72,29 @@
                   Partners
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="hackfest2023.html" class="nav-link">
+              <li class="nav-item has-menu mobile-dep">
+                <a href="#" class="nav-link mobile-dep">
                   Previous Events
+                </a>
+                <ul class="submenu">
+                 <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
+                 <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
+                 <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
+                </ul>
+               </li>
+               <li class="nav-item some-mobile">
+                <a class="nav-link" href="hackfest2022.html">
+                  Hackfest 2022
+                </a>
+              </li>
+              <li class="nav-item some-mobile">
+                <a class="nav-link" href="hackfest2023.html">
+                  Hackfest 2023
+                </a>
+              </li>
+              <li class="nav-item some-mobile">
+                <a class="nav-link" href="hackfest2024.html">
+                  HackFest 2024
                 </a>
               </li>
               <li class="nav-item">
@@ -83,6 +107,7 @@
           </div>
         </div>
       </nav>
+    </header>
       <!-- <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
         <div id="nav-container" class="container">
           <! Brand and toggle get grouped for better mobile display -->
@@ -106,7 +131,6 @@
 
       <!-- Hero Area End -->
 
-    </header>
     <!-- Header Area wrapper End -->
      
     
@@ -556,6 +580,34 @@ economy transition.
                           document.getElementById("clock").innerHTML = "EXPIRED";
                         }*/
                       }, 1000);
+
+
+                      document.addEventListener("DOMContentLoaded", function () {
+  // Select all nav items with submenus
+  let dropdownItems = document.querySelectorAll(".has-menu > a");
+
+  dropdownItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent default link behavior
+      let submenu = this.nextElementSibling; // Get the submenu
+
+      // Toggle submenu visibility
+      if (submenu.style.display === "block") {
+        submenu.style.display = "none";
+      } else {
+        submenu.style.display = "block";
+      }
+    });
+  });
+
+  // Prevent clicks inside submenu from closing navbar
+  document.querySelectorAll(".submenu a").forEach((submenuLink) => {
+    submenuLink.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+});
+
                       </script>
 
                     <!-- Go to Top Link
@@ -574,7 +626,7 @@ economy transition.
                     <script src="assets/js/jquery.easing.min.js"></script>
                     <script src="assets/js/wow.js"></script>
                     <script src="assets/js/nivo-lightbox.js"></script>
-                    <script src="assets/js/video.js"></script>
+                    <!-- <script src="assets/js/video.js"></script> -->
                     <script src="assets/js/main.js"></script>      
                     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <!-- Google tag (gtag.js) -->
