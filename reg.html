@@ -9,6 +9,8 @@
       <title>Register Now!</title>
   
       <!--Mene kiya hai--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
       <!-- Icon -->
@@ -49,25 +51,46 @@ th {
 
 /* Dropdown and Button Styling */
 select, button {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-select:focus, button:hover {
-    border-color: #00aaff;
-    color: #00aaff;
-}
-
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            cursor: pointer;
+        }
+        select:focus, button:hover {
+            border-color: #00aaff;
+            color: #00aaff;
+        }
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+        }
+        .filter-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
 /* Filter Controls */
 label {
     font-size: 18px;
     margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+            .filter-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 5px;
+            }
+        }
 
     </style>
   </head>
@@ -84,7 +107,7 @@ label {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto w-100 justify-content-end">
               
-              <li class="nav-item  has-menu">
+              <li class="nav-item active has-menu">
                 <!-- <divc class="has-menu"> -->
                   <a class="nav-link" href = "index.html">
                     Home
@@ -98,7 +121,7 @@ label {
                   
                 <!-- </div> -->
                 </li>
-    
+
               <li class="nav-item">
                 <!-- <a class="nav-link" href="#about"> -->
                 <a class="nav-link" href="about.html">
@@ -110,29 +133,37 @@ label {
                   Partners
                 </a>
               </li>
-            </li>
-            <li class="nav-item has-menu">
-             <a href="#" class="nav-link">
-               Previous Events
-             </a>
-             <ul class="submenu">
-              <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
-              <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
-              <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
-             </ul>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hackfest2022.html">
+                  Hackfest 2022
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./hackfest2023.html">
+                  Hackfest 2023
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="./hackfest2024.html">
+                  Hackfest 2024
+                </a>
+              </li>
+            
               <li class="nav-item">
                 <a class="nav-link" href="./faq.html">
                   FAQ
                 </a>
+              </li>
               
          
             </ul>
             </div>
         </div>
       </nav>
-    </header>    
-
+      </header>
+   
     <br>
 
     <section id="table" class="section-padding">
@@ -151,17 +182,19 @@ label {
     >
       CLICK HERE </a> to register and join the excitement.</p>  
 
-    <label for="stateFilter">Select State:</label>
-    <select id="stateFilter" onchange="updateHubOptions()">
-      <option value="">All States</option>
-    </select>
-
-    <label for="hubFilter">Select Hub:</label>
-    <select id="hubFilter">
-      <option value="">All Hubs</option>
-    </select>
-
-    <button onclick="applyFilters()">Filter</button>
+      <div class="filter-container">
+        <label for="stateFilter" style="color: white;">State:</label>
+        <select id="stateFilter" onchange="updateHubOptions()">
+            <option value="">All States</option>
+        </select>
+        <label for="hubFilter" style="color: white;">Hub:</label>
+        <select id="hubFilter">
+            <option value="">All Hubs</option>
+        </select>
+        <button onclick="applyFilters()">
+            <i class="fas fa-filter"></i> Filter
+        </button>
+    </div>
 
     <table id="collegeTable">
       <thead>
