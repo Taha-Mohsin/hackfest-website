@@ -96,73 +96,60 @@ label {
   </head>
   <body>
     <header id="header-wrap">
-      <!-- Navbar Start -->
       <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
         <div id="nav-container" class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a href="index.html" class="navbar-brand"><img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt=""></a>       
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <a href="index.html" class="navbar-brand">
+            <img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt="Hackfest Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
             <i class="lni-menu"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto w-100 justify-content-end">
-              
               <li class="nav-item active has-menu">
-                <!-- <divc class="has-menu"> -->
-                  <a class="nav-link" href = "index.html">
-                    Home
-                  </a>
+                <div class="menu-item">
+                  <a class="nav-link" href="#">Home</a>
+                  <button class="submenu-toggle mobile-only" style="color: white;">▼</button>
                   <ul class="submenu">
-                    <li class="nav-item"><a class="nav-link" href="#e">Event Schedule</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#p">Prize Money</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#t">Themes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#g">Guidelines</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#e">Event Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#p">Prize Money</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#t">Themes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#g">Guidelines</a></li>
                   </ul>
-                  
-                <!-- </div> -->
-                </li>
-
-              <li class="nav-item">
-                <!-- <a class="nav-link" href="#about"> -->
-                <a class="nav-link" href="about.html">
-                  Themes
-                </a>
-              </li>        
-              <li class="nav-item">
-                <a class="nav-link" href="./partners.html">
-                  Partners
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="hackfest2022.html">
-                  Hackfest 2022
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="./hackfest2023.html">
-                  Hackfest 2023
-                </a>
+                </div>
+                
               </li>
               
+    
               <li class="nav-item">
-                <a class="nav-link" href="./hackfest2024.html">
-                  Hackfest 2024
-                </a>
+                <a class="nav-link" href="about.html">Themes</a>
               </li>
-            
               <li class="nav-item">
-                <a class="nav-link" href="./faq.html">
-                  FAQ
-                </a>
+                <a class="nav-link" href="./partners.html">Partners</a>
               </li>
-              
-         
+    
+              <li class="nav-item has-menu">
+                <div class="menu-item">
+                <a href="#" class="nav-link">Previous Events</a>
+                <button class="submenu-toggle mobile-only" style="color: white;">▼</button>
+                <ul class="submenu">
+                  <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
+                  <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
+                  <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
+                </ul>
+                </div>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="./faq.html">FAQ</a>
+              </li>
+    
             </ul>
-            </div>
+          </div>
         </div>
       </nav>
-      </header>
+  
+     </header>
    
     <br>
 
@@ -319,6 +306,90 @@ label {
     <script src="assets/js/main.js"></script>      
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <!-- Google tag (gtag.js) -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  function isMobile() {
+    return window.innerWidth <= 991;
+  }
+
+  const navbar = document.querySelector(".navbar-collapse");
+  const menuItems = document.querySelectorAll(".has-menu > .menu-item > a");
+  const toggleButtons = document.querySelectorAll(".submenu-toggle.mobile-only");
+  let lastScrollTop = 0;
+
+  // Click event for main menu items (Home, Previous Events)
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener("click", function (e) {
+      if (isMobile()) {
+        e.preventDefault(); // Prevent navigation
+        let submenu = this.closest(".has-menu").querySelector(".submenu");
+
+        if (submenu.style.display === "block") {
+          submenu.style.display = "none";
+          this.classList.remove("active");
+        } else {
+          closeAllSubmenus();
+          submenu.style.display = "block";
+          this.classList.add("active");
+        }
+      }
+    });
+  });
+
+  // Click event for mobile-only dropdown buttons
+  toggleButtons.forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      let submenu = this.closest(".has-menu").querySelector(".submenu");
+
+      if (submenu.style.display === "block") {
+        submenu.style.display = "none";
+      } else {
+        closeAllSubmenus();
+        submenu.style.display = "block";
+      }
+    });
+  });
+
+  // Function to close all submenus
+  function closeAllSubmenus() {
+    document.querySelectorAll(".submenu").forEach((menu) => {
+      menu.style.display = "none";
+    });
+
+    document.querySelectorAll(".has-menu > .menu-item > a").forEach((link) => {
+      link.classList.remove("active");
+    });
+  }
+
+  // Close submenu when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".has-menu") && !e.target.classList.contains("submenu-toggle")) {
+      closeAllSubmenus();
+    }
+  });
+
+  // Close navbar when scrolling down on mobile
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && isMobile()) {
+      navbar.classList.remove("show"); // Bootstrap class to collapse navbar
+      closeAllSubmenus();
+    }
+
+    lastScrollTop = scrollTop;
+  });
+
+  // Reset menu when resizing from mobile to desktop
+  window.addEventListener("resize", function () {
+    if (!isMobile()) {
+      closeAllSubmenus();
+    }
+  });
+});
+
+ </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
 
   </body>
