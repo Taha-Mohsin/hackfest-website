@@ -367,45 +367,7 @@
           </div>
         </footer>
         
-                    <script>
-                      // Set the date we're counting down to
-                      var countDownDate = new Date("Mar 9, 2024 23:59:59").getTime();
-                      
-                      // Update the count down every 1 second
-                      var x = setInterval(function() {
-                      
-                        // Get today's date and time
-                        var now = new Date().getTime();
-                      
-                        // Find the distance between now and the count down date
-                        var distance = countDownDate - now;
-                      
-                        // Time calculations for days, hours, minutes and seconds
-                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                      
-                        // Display the result in the element with id="demo"
-                        document.getElementById("count-days").innerHTML = ('0' + days).substr(-2) ;
-                        document.getElementById("count-hours").innerHTML = ('0' + hours).substr(-2) ;
-                        document.getElementById("count-mins").innerHTML = ('0' + minutes).substr(-2) ;
-                        document.getElementById("count-sec").innerHTML = ('0' + seconds).substr(-2) ;
-                      
-                        /* If the count down is finished, write some text
-                        if (distance < 10000) {
-                          clearInterval(x);
-                          document.getElementById("clock").innerHTML = "EXPIRED";
-                        }*/
-                      }, 1000);
-                      </script>
-
-                    <!-- Go to Top Link 
-                    <a href="#" class="back-to-top">
-                    	<i class="lni-chevron-up"></i>
-                    </a> -->
-
-                    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                    
                     <script src="assets/js/jquery-min.js"></script>
                     <script src="assets/js/popper.min.js"></script>
                     <script src="assets/js/bootstrap.min.js"></script>
@@ -422,88 +384,93 @@
 <!-- Google tag (gtag.js) -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-  function isMobile() {
-    return window.innerWidth <= 991;
-  }
+    function isMobile() {
+      return window.innerWidth <= 991;
+    }
 
-  const navbar = document.querySelector(".navbar-collapse");
-  const menuItems = document.querySelectorAll(".has-menu > .menu-item > a");
-  const toggleButtons = document.querySelectorAll(".submenu-toggle.mobile-only");
-  let lastScrollTop = 0;
+    const navbar = document.querySelector(".navbar-collapse");
+    const menuItems = document.querySelectorAll(".has-menu > .menu-item > a");
+    const toggleButtons = document.querySelectorAll(".submenu-toggle.mobile-only");
+    let lastScrollTop = 0;
 
-  // Click event for main menu items (Home, Previous Events)
-  menuItems.forEach((menuItem) => {
-    menuItem.addEventListener("click", function (e) {
-      if (isMobile()) {
-        e.preventDefault(); // Prevent navigation
+    // Click event for main menu items (Home, Previous Events)
+    menuItems.forEach((menuItem) => {
+      menuItem.addEventListener("click", function (e) {
+        if (isMobile()) {
+          // Check if the clicked link is the "Home" link
+          if (menuItem.getAttribute("href") === "index.html") {
+            // Allow default navigation for the "Home" link
+            return;
+          }
+
+          e.preventDefault(); // Prevent navigation for other links
+          let submenu = this.closest(".has-menu").querySelector(".submenu");
+
+          if (submenu.style.display === "block") {
+            submenu.style.display = "none";
+            this.classList.remove("active");
+          } else {
+            closeAllSubmenus();
+            submenu.style.display = "block";
+            this.classList.add("active");
+          }
+        }
+      });
+    });
+
+    // Click event for mobile-only dropdown buttons
+    toggleButtons.forEach((toggle) => {
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
         let submenu = this.closest(".has-menu").querySelector(".submenu");
 
         if (submenu.style.display === "block") {
           submenu.style.display = "none";
-          this.classList.remove("active");
         } else {
           closeAllSubmenus();
           submenu.style.display = "block";
-          this.classList.add("active");
         }
-      }
+      });
     });
-  });
 
-  // Click event for mobile-only dropdown buttons
-  toggleButtons.forEach((toggle) => {
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      let submenu = this.closest(".has-menu").querySelector(".submenu");
+    // Function to close all submenus
+    function closeAllSubmenus() {
+      document.querySelectorAll(".submenu").forEach((menu) => {
+        menu.style.display = "none";
+      });
 
-      if (submenu.style.display === "block") {
-        submenu.style.display = "none";
-      } else {
+      document.querySelectorAll(".has-menu > .menu-item > a").forEach((link) => {
+        link.classList.remove("active");
+      });
+    }
+
+    // Close submenu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".has-menu") && !e.target.classList.contains("submenu-toggle")) {
         closeAllSubmenus();
-        submenu.style.display = "block";
+      }
+    });
+
+    // Close navbar when scrolling down on mobile
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop && isMobile()) {
+        navbar.classList.remove("show"); // Bootstrap class to collapse navbar
+        closeAllSubmenus();
+      }
+
+      lastScrollTop = scrollTop;
+    });
+
+    // Reset menu when resizing from mobile to desktop
+    window.addEventListener("resize", function () {
+      if (!isMobile()) {
+        closeAllSubmenus();
       }
     });
   });
-
-  // Function to close all submenus
-  function closeAllSubmenus() {
-    document.querySelectorAll(".submenu").forEach((menu) => {
-      menu.style.display = "none";
-    });
-
-    document.querySelectorAll(".has-menu > .menu-item > a").forEach((link) => {
-      link.classList.remove("active");
-    });
-  }
-
-  // Close submenu when clicking outside
-  document.addEventListener("click", function (e) {
-    if (!e.target.closest(".has-menu") && !e.target.classList.contains("submenu-toggle")) {
-      closeAllSubmenus();
-    }
-  });
-
-  // Close navbar when scrolling down on mobile
-  window.addEventListener("scroll", function () {
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop && isMobile()) {
-      navbar.classList.remove("show"); // Bootstrap class to collapse navbar
-      closeAllSubmenus();
-    }
-
-    lastScrollTop = scrollTop;
-  });
-
-  // Reset menu when resizing from mobile to desktop
-  window.addEventListener("resize", function () {
-    if (!isMobile()) {
-      closeAllSubmenus();
-    }
-  });
-});
-
- </script>
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
