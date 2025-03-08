@@ -383,7 +383,7 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   function isMobile() {
     return window.innerWidth <= 991;
   }
@@ -397,7 +397,13 @@
   menuItems.forEach((menuItem) => {
     menuItem.addEventListener("click", function (e) {
       if (isMobile()) {
-        e.preventDefault(); // Prevent navigation
+        // Check if the clicked link is the "Home" link
+        if (menuItem.getAttribute("href") === "index.html") {
+          // Allow default navigation for the "Home" link
+          return;
+        }
+
+        e.preventDefault(); // Prevent navigation for other links
         let submenu = this.closest(".has-menu").querySelector(".submenu");
 
         if (submenu.style.display === "block") {
@@ -464,8 +470,7 @@
     }
   });
 });
-
- </script>
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
