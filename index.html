@@ -3,20 +3,26 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:title" content="Hackfest 2024">
+    <meta property="og:description" content="3rd Edition of Hackfest">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hackfest.info/">
+    <meta property="og:image" content="https://hackfest.info/assets/image(1)-modified.png"/>
+
+    <title>Hackfest 2025</title>
 
 
-    <title>HACKFEST 2024</title>
-
-     <!--Mene kiya hai--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Mene kiya hai--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
     <!-- Icon -->
     <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css">
     <!-- Nivo Lightbox -->
-    <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css" >
+    <link rel="stylesheet" type="text/css" href  ="assets/css/nivo-lightbox.css" >
     <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" tygitpe="text/css" href="assets/css/animate.css">
     <!-- Main Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <!-- Responsive Style -->
@@ -30,317 +36,461 @@
     .faq-list .card-header .btn-link {
       color: black;
     }
-    /* General styles */
+    body {
+                    font-size: 1.0em;
+                  }
 
-.container {
-    max-width: 1200px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center container */
-}
+                  h2.section-title {
+                    font-size: 1.5em;
+                  }
 
-/* Shared styles for prize sections */
-.prize {
-    margin-bottom: 20px; /* Add some space between sections */
-}
+                  h3 {
+                    font-size: 1.3em;
+                  }
 
-.text-center {
-    text-align: center;
-    background-color: black;
-}
+                  p {
+                    font-size: 1.1em;
+                  }
 
-/* Specific styles for desktop */
-@media (min-width: 769px) {
-    .prize {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .prize .white-bg {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding: 20px;
-    }
-    
-    .prize .white-bg > div {
-        width: 45%; /* Adjust width as needed */
-    }
-    
-    .prize .white-bg img {
-        width: 100%;
-        height: auto;
-        border-radius: 3%;
-    }
-}
-
-/* Specific styles for mobile */
-@media (max-width: 768px) {
-    .prize .white-bg {
-        flex-direction: column;
-        padding: 10px;
-    }
-    
-    .prize .white-bg > div {
-        width: 100%; /* Occupy full width */
-        margin-bottom: 20px; /* Add space between elements */
-    }
-}
-.video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-    }
-    
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    @media only screen and (max-width: 768px) {
-        .video-container {
-            padding-bottom: 62.1875%; /* Adjusted aspect ratio for smaller screens */
-        }
-        
-    }
+                  li {
+                    font-size: 1.1em;
+                  }
   </style>
 
   <body>
-    
- <!-- Header Area wrapper Starts -->
- <header id="header-wrap">
-  <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
-    <div id="nav-container" class="container">
-      <a href="index.html" class="navbar-brand">
-        <img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt="Hackfest Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-        <i class="lni-menu"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto w-100 justify-content-end">
-          <li class="nav-item has-menu">
-            <div class="menu-item">
-              <a class="nav-link" href="index.html">Home</a>
-              <button class="submenu-toggle mobile-only" style="color: white;">▼</button>
-              <ul class="submenu">
-                <li class="nav-item"><a class="nav-link" href="index.html#e">Event Schedule</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#p">Prize Money</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#t">Themes</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#g">Guidelines</a></li>
-              </ul>
-            </div>
+
+    <!-- Header Area wrapper Starts -->
+    <!-- <header id="header-wrap"> -->
+      <!-- Navbar Start -->
+      <!-- <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+        <div id="nav-container" class="container"> -->
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <!-- <a href="index.html" class="navbar-brand"><img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt=""></a>       
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="lni-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              
+              <li class="nav-item active has-menu"> -->
+                <!-- <divc class="has-menu"> -->
+                  <!-- <a class="nav-link" href = "#">
+                    Home
+                  </a>
+                  <ul class="submenu">
+                    <li class="nav-item"><a class="nav-link" href="#e">Event Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#p">Prize Money</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#t">Themes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#g">Guidelines</a></li>
+                  </ul> -->
+                  
+                <!-- </div> -->
+                <!-- </li>
+
+              <li class="nav-item"> -->
+                <!-- <a class="nav-link" href="#about"> -->
+                <!-- <a class="nav-link" href="about.html">
+                  Themes
+                </a>
+              </li>        
+              <li class="nav-item">
+                <a class="nav-link" href="./partners.html">
+                  Partners
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hackfest2022.html">
+                  Hackfest 2022
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./hackfest2023.html">
+                  Hackfest 2023
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="./hackfest2024.html">
+                  Hackfest 2024
+                </a>
+              </li>
             
-          </li>
-          
-
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">Themes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./partners.html">Partners</a>
-          </li>
-
-          <li class="nav-item has-menu active">
-            <div class="menu-item">
-            <a href="hackfest2022.html" class="nav-link">Previous Events</a>
-            <button class="submenu-toggle mobile-only" style="color: white;">▼</button>
-            <ul class="submenu">
-              <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
-              <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
-              <li class="nav-item active"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="./faq.html">
+                  FAQ
+                </a>
+              </li>
+              
+         
             </ul>
             </div>
-          </li>
+        </div>
+      </nav>
+      </header>
+      <!-- Navbar End -->
 
-          <li class="nav-item">
-            <a class="nav-link" href="./faq.html">FAQ</a>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-</header>
-<!-- Navbar End -->
-
-  <!-- Hero Area End -->
-
+      <header id="header-wrap">
+        <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+          <div id="nav-container" class="container">
+            <a href="index.html" class="navbar-brand">
+              <img style="width: 180px;" id="nav-logo" src="assets/Hackfest.png" alt="Hackfest Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+              <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                <li class="nav-item active has-menu">
+                  <div class="menu-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <button class="submenu-toggle mobile-only" style="color: white;">▼</button>
+                    <ul class="submenu">
+                      <li class="nav-item"><a class="nav-link" href="#e">Event Schedule</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#p">Prize Money</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#t">Themes</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#g">Guidelines</a></li>
+                    </ul>
+                  </div>
+                  
+                </li>
+                
+      
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Themes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./partners.html">Partners</a>
+                </li>
+      
+                <li class="nav-item has-menu">
+                  <div class="menu-item">
+                  <a href="hackfest2022.html" class="nav-link">Previous Events</a>
+                  <button class="submenu-toggle mobile-only" style="color: white;">▼</button>
+                  <ul class="submenu">
+                    <li class="nav-item"><a class="nav-link" href="hackfest2022.html">Hackfest 2022</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hackfest2023.html">Hackfest 2023</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hackfest2024.html">Hackfest 2024</a></li>
+                  </ul>
+                  </div>
+                </li>
+      
+                <li class="nav-item">
+                  <a class="nav-link" href="./faq.html">FAQ</a>
+                </li>
+      
+              </ul>
+            </div>
+          </div>
+        </nav>
+    
+      
+      
       <!-- Hero Area Start -->
       <div id="hero-area" class="hero-area-bg">
         <div class="overlay"></div>
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-9 col-sm-12">
-              <div class="contents" style="text-align: center;">
+              <div class="contents text-center">
                 <!-- <div class="icon">
                   <i class="lni-mic"></i>
                 </div> -->
-                <a href="index.html" class="navbar-brand"><img style="width: 180px;" id="logo-2023" src="assets/hackfest_2024.png" style="width: 180px" alt"="" style="width: 150px;"></a>
+                <a href="index.html" class="navbar-brand"><img id="nav-logo" src="assets/HeroHackfest.png" alt="" style="width: 300px;"></a>
                 
                 <p class="banner-desc" style="color: black;">
-                  In July 2024, the PSG Institute of Technology and Applied Research (PSGiTech) hosted HACKFEST 2024, the third edition of the hackathon, organized by the Department of Computer Science and Engineering in collaboration with industry leader SAP.
+                  PSG iTech and SAP are proud to announce the 4<sup>th</sup> edition of Hackfest
                 </p>
-                
-                  <img id="hero-image" style="margin-left: auto; margin-right: auto;" src="assets/psg_tech_logo.png" alt="">
-                  <img id="hero-image" style="margin-left: auto; margin-right: auto;" src="assets/SAP_logo-3431680366.png" width="180px" height="95px" alt="">
-                  <!-- <div class="banner-btn">
-                    <a href="#" id="hero-register" class="btn btn-common">Register Now!</a>
-                  </div> -->
-                <!-- <p class="banner-info">Hackathon begins on 4th March 2024.<br>Last date for registration is </p> -->
+                  <br/>
+                  <p><a href="#domains">Know more about the themes</a></p><br>
+                  <p><a href="reg.html" target = "_blank" id="hero-register" class="btn btn-common">Register Now!</a></p>
+                  <br />
+                  <p><a href="#prizes">Know more about the prizes</a></p>
+                  <p class="banner-info" style="color: black;">Hackfest begins on 17 <sup>th</sup> March 2025<br>Last date for registration is 25 <sup>th</sup> April 2025</p>
+                  
+                  <div style="display: flex; justify-content: center;">
+                    <img id="hero-image" style="margin-left: auto; margin-right: auto;" src="assets/psg_tech_logo.png" alt="">
+                    <img id="hero-image" style="margin-left: auto; margin-right: auto; max-width: 100%; height: auto;" src="assets/SAP_logo-3431680366.png" width="180px" height="95px" alt="">
+                  </div>
+                  <br />
+                  <div class="banner-btn">
+                    
+                  </div>
               </div>
             </div>
           </div>
         </div>
         
-      </div>
+          </div>
       <!-- Hero Area End -->
 
     </header>
-             
-    <div class="prize" id="prize2">
-      <section class="text-center">
-        <section>
-          <h1 class="sub-heading diagonal-text orange sub-heading-title" style="font-size: 2.5rem;padding-top: 4em; color: #ffb62f;"><strong>HACKFEST 2024</strong></h1>
-        </section>
-        <section data-aos="fade-up" data-aos-duration="1500" class="white-bg" style="display: flex;margin: 5%;">
+    <!-- Header Area wrapper End -->
 
-          <div class="mx-auto">
-            <div class="container nexa video-container">
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/uojH-nlCDB4?si=OAnSFus2jyfrMIKb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <br><br>
-            </div>
-          </div>
-          <div class="mx-auto">
-            <div class="container nexa" style="margin-top: 3%; margin-left: -10%;  text-align:justify;">
-              <p class="black" style="font-size: 20px;">
-                iTech Hackfest is a Hackathon, which provides a platform to bring talented engineering graduates from diverse backgrounds together to collaborate and create innovative solutions to real-world problems. This is a fantastic opportunity for participants to showcase their creativity, technical and people skills. With SAP as the primary sponsor, participants will have the opportunity to interact with industry experts, mentors, and judges who will provide them with valuable insights and feedback on their projects. iTech Hackfest provides an excellent opportunity for participants to network and build lasting relationships with like-minded individuals, while creating innovative solutions. The event is designed to be a fun and engaging experience for all participants, with various activities and challenges.
+    <!-- Count Bar Start -->
+    
+    <!-- Count Bar End -->
 
-              </p>
-              <br><br>
-            </div>
-          </div>
-        </section>
-        
-      
-        <section data-aos="fade-up" data-aos-duration="1500" class="white-bg" style="display: flex;margin:5%;">
-          <div class="mx-auto">
-            <div class="container nexa">
-              <img src="assets/img/previous_events/2024/1.jpeg" width="80%" height="100%" style="border-radius: 3%;">
-            </div>
-          </div>
-          <div class="mx-auto">
-            <div class="container nexa" style="margin-top: 3%; margin-left: -10%;  text-align: justify;">
-              <p class="black" style="font-size: 20px;">
-                Hackfest 2024 fostered 2,500 teams with three to five members each. More than 12,500 students participated in the two-day coding challenge. The teams formulated problem statements based on the given three themes: “Crowd Sourced Disaster Management,” “Green Credit Management,” and “Empowering the Future: Hacking Solutions for Renewable Energy.” The top ten teams were evaluated based on following metrics: (i)Code and Design, (ii) Innovation and Desirability, (iii) Usability, (iv) Demo and Presentation.
-            </p>
-              <br><br>
-            </div>
-          </div>
-         
-        </section>
 
-        <section data-aos="fade-up" data-aos-duration="1500" class="white-bg" style="display: flex;margin:5%;">
-          <div class="mx-auto">
-            <div class="container nexa">
-              <img src="assets/img/previous_events/2024/2.jpeg" width="100%" height="80%" style="border-radius: 3%;">
-            </div>
-          </div>
-          <div class="mx-auto">
-            <div class="container nexa" style="margin-top: 10%; margin-left: -10%; text-align: justify;">
-              <p class="black" style="font-size: 20px;">
-                The winners of Hackfest were announced at the valedictory function on July 26, 2024. The team from Thapar Institute of Engineering and Technology  won the first prize of Rs. 2.5 Lakh, Rajalakshmi Engineering College secured the second prize of Rs. 1.5 Lakh and Chandigarh Engineering College secured the third prize of Rs. 75,000.
-            </p>
-              <br><br>
-            </div>
-          </div>
-        </section>
 
+    <!-- Video Section Start -->
+    <!-- <div class="ready-to-play">
+      <video id="bgvid" class="stop" loop>
+        <source src="assets/video/hackfest.mp4" type="video/mp4">
+      </video>
+      <div id="polina" class="video-text">
+        <div class="tb-t">
+            <div class="tb-c">
+              <div class="polina"><button><i class='lni-play'></i></button></div>
+            </div>
+        </div>
       </div>
-      <div class="prize" id="prize2" style="background-color: #1324588c;">
-        <section class="text-center">
-          <section>
-            <h1 class="sub-heading diagonal-text orange sub-heading-title" style="font-size: 2.5rem;padding-top: 4em; color: #ffcb2f;"><strong>HACKFEST 2024 WINNERS</strong></h1>
-          </section>
-          <section data-aos="fade-up" data-aos-duration="1500" class="white-bg" style="display: flex;margin:5%;">
-            <div class="mx-auto">
-              <div class="container nexa" style="margin-top: 3%;  text-align: justify;">
-                <p class="black" style="font-size: 20px;">
-                  <ul style="font-size: 20px; color: aliceblue;">
-                    <li>1st Prize:</li>
-                    <br />
-                    <li>Team name: BroCode</li>
-                    <li>College: Thapar Institute of Engineering and Technology </li>
-                    <br />
-                    <li>Team Members: Kanishk Jagya, Reyan Singh, Hushraj Singh, Gurman Kaur</li>
-                    </ul>
+    </div> -->
+    <!-- Video Section End -->
+    
+   
 
-                </p>
-                <br><br>
+            <!-- Event Schedule Start -->
+            <article id="e">
+            <section class="section-padding text-center">
+            <div class="text-center">
+              <h2 class="section-title" style="font-size: 40px !important;">Event Schedule</h2>
+              
+                <img src="./assets/img/2013.jpg" alt="Event Schedule Image" class="img-fluid" style="width: 500px;">
               </div>
-            </div>
-            <div class="mx-auto">
-              <div class="container nexa">
-                <img src="assets/img/previous_events/2024/3.jpeg" width="80%" height="100%" style="border-radius: 3%;">
-              </div>
-            </div>
-          </section>
-          <section data-aos="fade-up" data-aos-duration="1500" class="white-bg" style="display: flex;margin: 5%;">
-            <div class="mx-auto">
-              <div class="container nexa" style="margin-top: 3%;  text-align: justify;">
-                <p class="black" style="font-size: 20px;">
-                  <ul style="font-size: 20px; color: aliceblue;">
-                    <li>2nd Prize:</li>
-                    <br />
-                    <li>Team Name: Matrix Infinity </li>
-                    <li>College: Rajalakshmi Engineering College </li>
-                    <br />
-                    <li>Team Members: Vishaal Krishna TG, Vishaal S, Sharvesh AR, Shakithiyan KV, Surya Prakash G</li>
-                  </ul>
-                </p>
-                <br><br>
-              </div>
-            </div>
-            <div class="mx-auto">
-              <div class="container nexa">
-                <img src="assets/img/previous_events/2024/4.jpeg" width="80%" height="100%" style="border-radius: 3%;">
-              </div>
-            </div>
-          </section>
-          <section data-aos="fade-up" data-aos-duration="1500" class="white-bg" style="display: flex;margin:5%;">
-            <div class="mx-auto">
-              <div class="container nexa" style="margin-top: 3%;  text-align: justify;">
-                <p class="black" style="font-size: 20px;">
-                  <ul style="font-size: 20px; color: aliceblue;">
-                    <li>3rd Prize:</li>
-                    <br />
-                    <li>Team Name: Rudhraksha</li>
-                    <li>College: Chandigarh Engineering College </li>
-                    <br />
-                    <li>Team Members: Rohit Singh, Shivam Pandey, Piyush Kumar Bharwal, Lovenshu</li>
-                  </ul>
-                </p>
-                <br><br>
-              </div>
-            </div>
-            <div class="mx-auto">
-              <div class="container nexa">
-                <img src="assets/img/previous_events/2024/5.jpeg" width="80%" height="100%" style="border-radius: 3%;">
-              </div>
-            </div>
-          </section>
-        </section>
+            </section>
+          </article>
+            <!-- Schedule Section End -->
+        
+<!-- Prizes Section Start -->
+<!-- <section id="prizes" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title-header text-center">
+          <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Prizes and Awards</h2>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">2.5 lakh for 1st place</p>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">1.5 lakh for 2nd place</p>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">75k for 3rd place</p>
+        </div>
       </div>
     </div>
+    
+    
+  </div>
+</section> -->
+<article id="p">
+<section id="prizes" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title-header text-center">
+          <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Prizes and Awards</h2>
+          <br>
+          <div class="row align-items-center justify-content-center">
+            <div class="col-auto">
+              <img height = "150px" src ="assets/img/prize/1st.png" alt="First Prize Image">
+              <p class="wow fadeInDown" data-wow-delay="0.2s">₹ 1,50,000</p>
+            </div>
+            <div class="col-auto">
+              <img height = "150px" src="assets/img/prize/2nd.png" alt="Second Prize Image">
+              <p class="wow fadeInDown" data-wow-delay="0.2s">₹ 1,00,000</p>
+            </div>
+            <div class="col-auto">
+              <img height = "150px" src="assets/img/prize/3rd.png" alt="Third Prize Image">
+              <p class="wow fadeInDown" data-wow-delay="0.2s">₹ 50,000</p>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+</article>
 
-        <br><br><br><br>
+
+<!-- Prizes Section End -->
+
+
+
+
+
+    <!-- Blog Section Start -->
+    <article id="t">
+    <section id="domains" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Themes</h2>
+              <p class="wow fadeInDown" data-wow-delay="0.2s">Problem statements will be based on the following domains.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="blog-item">
+              <div class="blog-image">
+                <a>
+                  <a href="about.html">
+                    <img class="img-fluid" src="assets/img/domains/Theme 1.jpeg" alt="">
+                  </a>
+                </a>
+              </div>
+              <div class="descr">
+                <div class="icon">
+                  <i class="lni-image"></i>
+                </div>
+                <h3 class="title">
+                  <a>
+                    Sustainable Business
+                    <br><br>
+                    <p style="color: #1c1c1c;">‎  </p>
+                  </a>
+                </h3>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="blog-item">
+              <div class="blog-image">
+                <a href="about.html#y">
+                  <img class="img-fluid" src="assets/img/domains/Theme 2.jpeg" alt="">
+                </a>
+              </div>
+              <div class="descr">
+                <div class="icon">
+                  <i class="lni-arrow-right"></i>
+                </div>
+                <h3 class="title">
+                  <a>
+                    Preventing Digital Fraud
+                  <p style="color: #1c1c1c;"> ‎ <br>‎ </p>
+                  </a>
+                </h3>
+                            </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="blog-item">
+              <div class="blog-image">
+                <a href="about.html#q">
+                  <img class="img-fluid" src="assets/img/domains/Theme 3.jpeg" alt="">
+                </a>
+              </div>
+              <div class="descr">
+                <div class="icon">
+                  <i class="lni-camera"></i>
+                </div>
+                <h3 class="title">
+                  <a >
+                    Ethics in AI Models for Business
+                    <br>
+                    <br>
+                    <br>
+                  </a>
+                </h3>
+                          </div>
+              
+            </div>
+          </div>
+    </section>
+    </article>
+
+        <!-- Guidelines Section Start -->
+        <article id="g">
+        <section id="guidelines" class="section-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="section-title-header text-center">
+                  <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Guidelines</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-15">
+                <div class="guidelines-content">
+                  <h3>Regional Round:</h3>
+                  <br>
+                  <div style="color: white !important;">
+                    <li>Team can consist of 4 to 5 Participants (min and max)</li>
+                    <li>Participants should belong to B.E, B.Tech, B.Sc., BCA, M.E, M.Tech, MCA or MSc and should be studying in any stream and any semester/year</li>
+                    <li>Participants should belong to same College but need not belong to same stream and semester/year</li>
+                    <li>One team can register only one idea, duplicate/additional submission will be deleted</li>
+                    <li>The teams should have registered to the <a href="https://learninghub.sap.com/" target = "_blank">SAP Learning Hub</a></li>
+                    <li>During Regional Round, Only ideas will be evaluated, it is not mandatory to have a working prototype</li>
+                    <li>Idea Pitch should be Slide based, Do not use paper based presentation</li>
+                    <li>Each team will be given 10 mins of time to pitch and 5 mins for Q&A</li>
+                  </div>
+                  <br>
+                  <br>
+                  <h3>State Hub Round:</h3>
+                  <div style="color: white !important;">
+                    <br>
+                    <li >Teams who qualify from Regional Round progress to State Hub Round</li>
+                    <li>Teams should have a clear understanding of user needs, market analysis, implementation strategies, scalability and overall benefits. 
+                   They should have completed the <a href = "https://learning.sap.com/courses/design-thinking-in-a-nutshell" target = "_blank">Design Thinking (DT)</a> course on the SAP Learning Hub and ensure that their presentation aligns with its principles.</li>
+                    <li>Each team will be given 10 mins of time to pitch and 5 mins for Q&A</li>
+                  </div>
+                  <br>
+                  <br>
+                  <h3>SAP Round:</h3>
+                  <div style="color: white !important;">
+                    <br>
+                    <li >Teams who qualify from State Hub Round progress to SAP Round</li>
+                    <li>Teams should have completed the Business Model Canvas courses available on <a href = "https://apphaus.sap.com/resource/validate-your-business-model" target = "_blank">AppHaus</a> or <a href="https://www.coursera.org/learn/business-model-canvas#modules" target = "_blank">Coursera</a>. The presentation must include a well-structured and comprehensive Business Model Canvas</li>
+                    <li >Each team will be given 10 mins of time to pitch and 5 mins for Q&A</li>
+                  </div>
+                  <br>
+                  <br>
+                  <h3>Final Round:</h3>
+                  <div style="color: white !important;">
+                    <br>
+                    <li >The finale will be hosted at PSGiTech, Neelambur, Coimbatore, Tamil Nadu - 641062</li>
+                    <li >In the finale, teams must design, develop and demonstrate a functional prototype leveraging SAP technologies</li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </article>
+        <!-- Guidelines Section End -->
+    </section>
+    <!-- Blog Section End -->
+
+
+<!-- <section id="guidelines" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title-header text-center">
+          <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Register</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="guidelines-content">
+          <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+            <a href="registration.html" class="btn btn-common">Register Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+    
+
+
+
+                    
+<br><br><br><br>
 <footer class="text-center text-white py-3" style="background-color: rgba(28, 28, 28, 0.95);">
   <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; padding: 0 20px;">
       <!-- Developer Info -->
@@ -367,40 +517,7 @@
   </div>
 </footer>
 
-                    <script>
-                      // Set the date we're counting down to
-                      var countDownDate = new Date("Mar 9, 2024 23:59:59").getTime();
-                      
-                      // Update the count down every 1 second
-                      var x = setInterval(function() {
-                      
-                        // Get today's date and time
-                        var now = new Date().getTime();
-                      
-                        // Find the distance between now and the count down date
-                        var distance = countDownDate - now;
-                      
-                        // Time calculations for days, hours, minutes and seconds
-                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                      
-                        // Display the result in the element with id="demo"
-                        document.getElementById("count-days").innerHTML = ('0' + days).substr(-2) ;
-                        document.getElementById("count-hours").innerHTML = ('0' + hours).substr(-2) ;
-                        document.getElementById("count-mins").innerHTML = ('0' + minutes).substr(-2) ;
-                        document.getElementById("count-sec").innerHTML = ('0' + seconds).substr(-2) ;
-                      
-                        /* If the count down is finished, write some text
-                        if (distance < 10000) {
-                          clearInterval(x);
-                          document.getElementById("clock").innerHTML = "EXPIRED";
-                        }*/
-                      }, 1000);
-                      </script>
-
-                    <!-- Go to Top Link 
+  <!-- Go to Top Link
                     <a href="#" class="back-to-top">
                     	<i class="lni-chevron-up"></i>
                     </a> -->
@@ -413,24 +530,28 @@
                     <script src="assets/js/waypoints.min.js"></script>
                     <script src="assets/js/jquery.counterup.min.js"></script>
                     <script src="assets/js/jquery.nav.js"></script>
+		                <script src="assets/js/wow.js"></script>
                     <script src="assets/js/jquery.easing.min.js"></script>
-                    <script src="assets/js/wow.js"></script>
                     <script src="assets/js/nivo-lightbox.js"></script>
                     <script src="assets/js/video.js"></script>
                     <script src="assets/js/main.js"></script>      
                     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<!-- Google tag (gtag.js) -->
-<script>
+                    <!-- <script src="timeline.css"></script> -->
+                    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
+
+ <script>
+  
   document.addEventListener("DOMContentLoaded", function () {
     function isMobile() {
       return window.innerWidth <= 991;
     }
-
+  
     const navbar = document.querySelector(".navbar-collapse");
     const menuItems = document.querySelectorAll(".has-menu > .menu-item > a");
     const toggleButtons = document.querySelectorAll(".submenu-toggle.mobile-only");
     let lastScrollTop = 0;
-
+  
     // Click event for main menu items (Home, Previous Events)
     menuItems.forEach((menuItem) => {
       menuItem.addEventListener("click", function (e) {
@@ -440,10 +561,10 @@
             // Allow default navigation for the "Home" link
             return;
           }
-
+  
           e.preventDefault(); // Prevent navigation for other links
           let submenu = this.closest(".has-menu").querySelector(".submenu");
-
+  
           if (submenu.style.display === "block") {
             submenu.style.display = "none";
             this.classList.remove("active");
@@ -455,13 +576,13 @@
         }
       });
     });
-
+  
     // Click event for mobile-only dropdown buttons
     toggleButtons.forEach((toggle) => {
       toggle.addEventListener("click", function (e) {
         e.preventDefault();
         let submenu = this.closest(".has-menu").querySelector(".submenu");
-
+  
         if (submenu.style.display === "block") {
           submenu.style.display = "none";
         } else {
@@ -470,37 +591,37 @@
         }
       });
     });
-
+  
     // Function to close all submenus
     function closeAllSubmenus() {
       document.querySelectorAll(".submenu").forEach((menu) => {
         menu.style.display = "none";
       });
-
+  
       document.querySelectorAll(".has-menu > .menu-item > a").forEach((link) => {
         link.classList.remove("active");
       });
     }
-
+  
     // Close submenu when clicking outside
     document.addEventListener("click", function (e) {
       if (!e.target.closest(".has-menu") && !e.target.classList.contains("submenu-toggle")) {
         closeAllSubmenus();
       }
     });
-
+  
     // Close navbar when scrolling down on mobile
     window.addEventListener("scroll", function () {
       let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
+  
       if (scrollTop > lastScrollTop && isMobile()) {
         navbar.classList.remove("show"); // Bootstrap class to collapse navbar
         closeAllSubmenus();
       }
-
+  
       lastScrollTop = scrollTop;
     });
-
+  
     // Reset menu when resizing from mobile to desktop
     window.addEventListener("resize", function () {
       if (!isMobile()) {
@@ -508,15 +629,7 @@
       }
     });
   });
-
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-53G2KQPBY4');
-</script>
-
-                  </body>
-                </html>
+ </script>
+  
+</body>
+</html>
