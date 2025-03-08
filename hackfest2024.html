@@ -420,91 +420,96 @@
                     <script src="assets/js/main.js"></script>      
                     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-53G2KQPBY4"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-  function isMobile() {
-    return window.innerWidth <= 991;
-  }
+    function isMobile() {
+      return window.innerWidth <= 991;
+    }
 
-  const navbar = document.querySelector(".navbar-collapse");
-  const menuItems = document.querySelectorAll(".has-menu > .menu-item > a");
-  const toggleButtons = document.querySelectorAll(".submenu-toggle.mobile-only");
-  let lastScrollTop = 0;
+    const navbar = document.querySelector(".navbar-collapse");
+    const menuItems = document.querySelectorAll(".has-menu > .menu-item > a");
+    const toggleButtons = document.querySelectorAll(".submenu-toggle.mobile-only");
+    let lastScrollTop = 0;
 
-  // Click event for main menu items (Home, Previous Events)
-  menuItems.forEach((menuItem) => {
-    menuItem.addEventListener("click", function (e) {
-      if (isMobile()) {
-        e.preventDefault(); // Prevent navigation
+    // Click event for main menu items (Home, Previous Events)
+    menuItems.forEach((menuItem) => {
+      menuItem.addEventListener("click", function (e) {
+        if (isMobile()) {
+          // Check if the clicked link is the "Home" link
+          if (menuItem.getAttribute("href") === "index.html") {
+            // Allow default navigation for the "Home" link
+            return;
+          }
+
+          e.preventDefault(); // Prevent navigation for other links
+          let submenu = this.closest(".has-menu").querySelector(".submenu");
+
+          if (submenu.style.display === "block") {
+            submenu.style.display = "none";
+            this.classList.remove("active");
+          } else {
+            closeAllSubmenus();
+            submenu.style.display = "block";
+            this.classList.add("active");
+          }
+        }
+      });
+    });
+
+    // Click event for mobile-only dropdown buttons
+    toggleButtons.forEach((toggle) => {
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
         let submenu = this.closest(".has-menu").querySelector(".submenu");
 
         if (submenu.style.display === "block") {
           submenu.style.display = "none";
-          this.classList.remove("active");
         } else {
           closeAllSubmenus();
           submenu.style.display = "block";
-          this.classList.add("active");
         }
-      }
+      });
     });
-  });
 
-  // Click event for mobile-only dropdown buttons
-  toggleButtons.forEach((toggle) => {
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      let submenu = this.closest(".has-menu").querySelector(".submenu");
+    // Function to close all submenus
+    function closeAllSubmenus() {
+      document.querySelectorAll(".submenu").forEach((menu) => {
+        menu.style.display = "none";
+      });
 
-      if (submenu.style.display === "block") {
-        submenu.style.display = "none";
-      } else {
+      document.querySelectorAll(".has-menu > .menu-item > a").forEach((link) => {
+        link.classList.remove("active");
+      });
+    }
+
+    // Close submenu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".has-menu") && !e.target.classList.contains("submenu-toggle")) {
         closeAllSubmenus();
-        submenu.style.display = "block";
+      }
+    });
+
+    // Close navbar when scrolling down on mobile
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop && isMobile()) {
+        navbar.classList.remove("show"); // Bootstrap class to collapse navbar
+        closeAllSubmenus();
+      }
+
+      lastScrollTop = scrollTop;
+    });
+
+    // Reset menu when resizing from mobile to desktop
+    window.addEventListener("resize", function () {
+      if (!isMobile()) {
+        closeAllSubmenus();
       }
     });
   });
 
-  // Function to close all submenus
-  function closeAllSubmenus() {
-    document.querySelectorAll(".submenu").forEach((menu) => {
-      menu.style.display = "none";
-    });
-
-    document.querySelectorAll(".has-menu > .menu-item > a").forEach((link) => {
-      link.classList.remove("active");
-    });
-  }
-
-  // Close submenu when clicking outside
-  document.addEventListener("click", function (e) {
-    if (!e.target.closest(".has-menu") && !e.target.classList.contains("submenu-toggle")) {
-      closeAllSubmenus();
-    }
-  });
-
-  // Close navbar when scrolling down on mobile
-  window.addEventListener("scroll", function () {
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop && isMobile()) {
-      navbar.classList.remove("show"); // Bootstrap class to collapse navbar
-      closeAllSubmenus();
-    }
-
-    lastScrollTop = scrollTop;
-  });
-
-  // Reset menu when resizing from mobile to desktop
-  window.addEventListener("resize", function () {
-    if (!isMobile()) {
-      closeAllSubmenus();
-    }
-  });
-});
-
- </script>
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
